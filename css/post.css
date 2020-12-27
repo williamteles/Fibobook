@@ -29,7 +29,7 @@
 }
 
 .likes {
-	margin-top: 2px;
+	margin-top: 5px;
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	grid-row: 4;
@@ -37,12 +37,17 @@
 }
 
 .like-button {
-	grid-row: 4;
-	grid-column: 1/2;
-	width: 25px;
-	height: 25px;
-	margin-left: 10px;
+    grid-row: 4;
+    grid-column: 1/2;
+    width: 25px;
+    height: 25px;
+	margin-left: 5px;
 }
+
+.like-button:hover {
+    fill: var(--primary-color);
+}
+
 
 .comp-button {
 	grid-row: 4;
