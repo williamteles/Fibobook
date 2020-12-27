@@ -1,0 +1,182 @@
+:root{
+  --title-color:#466175;
+  --primary-color: #1CDF74;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: #18191a;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 20px auto;
+  color: white;
+}
+
+form {
+  width: 480px;
+  height: 300px;
+  margin: 20px 0;
+  background-color: #242526;
+  padding: 30px 25px;
+  border-radius: 5px;
+}
+
+form .input-block {
+  margin-bottom: 20px;
+}
+
+form .input-block label {
+  font-size: 14px;
+  color: white;
+}
+
+form .input-block input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 13px 24px;
+  font-size: 16px;
+  
+  border-radius: 8px;
+  border: 1px solid #ccddef;
+  outline-color: var(--primary-color);
+}
+
+form .btn-login {
+  display: block;
+  width: 220px;
+  height: 35px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+}
+
+/* APARIÇÃO DO FORM */
+form {
+  overflow: hidden;
+  animation: fade 0.2s;
+}
+
+form .input-block:nth-child(1) {
+  animation: move 500ms;
+}
+
+form .input-block:nth-child(2) {
+  animation: move 400ms;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: move 400ms;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Quando clicar no botão, sumir com o form */
+.form-hide {
+  animation: down 1.2s forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* FORM NO-NO */
+form.validate-error {
+  animation: nono 200ms linear, fade paused;
+  animation-iteration-count: 2;
+}
+
+@keyframes nono {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-15%);
+  }
+  70% {
+    transform: translateX(15%);
+  }
+}
+
+
+/* squares */
+body {
+  overflow: hidden;
+}
+.squares li {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(23, 191, 99, 0.40);
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  animation: up 2s infinite alternate;
+  z-index:-1
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-800px) rotate(960deg);
+  }
+}

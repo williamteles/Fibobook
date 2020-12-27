@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap");
+/* criando variáveis para estilização com cores, facilitando o uso */
+:root{
+    --title-color: white;
+    --primary-color: #12af6e;
+    --background: #18191a;
+}
+/* resetando a estilização que o navegador coloca */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+}
+/* aplicando já o conceito do css unity para elementos fluídos, fazendo com oq 1 rem = 10px */
+html {
+    font-size: 65.2%;
+}
+
+body{
+    font-size: 1.6rem;
+}

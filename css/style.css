@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(350px, 2fr) minmax(200px, 1fr);
+    grid-template-rows: 10vh 85vh 5vh;
+}
+
+main {
+    background:#242526;
+    grid-column: 2;
+    border-radius: 10px;
+	height: 1000vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+

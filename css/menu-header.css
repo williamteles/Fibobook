@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Segoe UI Historic|Segoe UI");
+
+header {
+    grid-column: 1/-1;
+    position: relative;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+	padding-right: 10px;
+    align-items: center;
+	width: 100%;
+	position: fixed;
+    background:#242526;
+	border-bottom: 2px groove #65676B;
+}
+
+#logo {
+    width: 65px;
+    height: 60px;
+}
+
+input{
+    margin: 0px;
+}
+
+#search-input {
+    border-radius: 20px;
+    height: 35px;
+    width: 350px;
+	margin-left: 80px;
+    padding-left: 10px;
+    
+}
+
+.perfil {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.perfil-image {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-right: 0px;
+}
+
+#name-perfil {
+    color : white;
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FiboBook</title>
+    <link rel="stylesheet" href="css/post.css" />
+    <link rel="stylesheet" href="css/perfil-style.css">
+    <link rel="stylesheet" href="css/menu-header.css">
+    <link rel="stylesheet" href="css/sidebar-menu-left.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="menu">
+                <img src="image/logo.png" alt="logo" id='logo'>
+                <input type="text" id="search-input" placeholder="Pesquisar...">
+                <div class="perfil">
+                    <p id="name-perfil"><a href="perfil.html">Erick Jacquin</a></p>
+                    <img src="image/profile-photos/pp-Jacquin.jpg" alt="perfil" class="perfil-image">
+                    <a href="login.html"><img src="image/icons/logout.png"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-perfil">
+                <div class="images-perfil">
+                    <img src="image/profile-photos/banner-Jacquin.jpg" alt="banner" id="user-banner">
+                    <div class="image-user-photo">
+                        <img src="image/profile-photos/pp-Jacquin.jpg" alt="photo-user" id="user-photo">
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="user-data">
+                        <h3 id="user-name">Erick Jacquin</h3>
+                        <p id="user-bio">Cozinheiro</p>
+                        <p id="user-address">São Paulo, SP</p>
+                    </div>
+                    <div id="edit-perfil">
+                        <input type="button" value="Editar Perfil">
+                    </div>
+                </div>
+                <div class="commands-perfil">
+                    <h3 id="user-posts" class="options">Post</h3>
+                    <h3 id="user-photos" class="options">Fotos</h3>
+                    <h3 id="user-likes" class="options">Curtidas</h3>
+                </div>
+            </div>
+            <div id="posters">
+                <div class="post">
+                    <img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
+                    <p class="username">Erick Jacquin</p>
+                    <img class="option-icon" src="image/icons/more-options.png" />
+                    <p class="post-description">Eu e meu peru gordo</p>
+                    <img class="post-image"
+                        src="https://www.portalsabores.com.br/wp-content/uploads/2016/11/Jacquin.jpg" />
+                    <p class="likes">5</p>
+                    <img class="like-button" src="image/icons/like-preto.png" />
+                    <img class="comp-button" src="image/icons/comp-preto.png" />
+                    <textarea class="comment"></textarea>
+                    <button class="butao">Enviar</button>
+                </div>
+                <div class="post">
+                    <img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
+                    <p class="username">Erick Jacquin</p>
+                    <img class="option-icon" src="image/icons/more-options.png" />
+                    <p class="post-description">Que banana gostosa</p>
+                    <img class="post-image"
+                        src="https://f.i.uol.com.br/fotografia/2019/06/06/15598529795cf977b3e9c6c_1559852979_1x1_md.jpg" />
+                    <p class="likes">5</p>
+                    <img class="like-button" src="image/icons/like-preto.png" />
+                    <img class="comp-button" src="image/icons/comp-preto.png" />
+                    <textarea class="comment"></textarea>
+                    <button class="butao">Enviar</button>
+                </div>
+                <div class="post">
+                    <img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
+                    <p class="username">Erick Jacquin</p>
+                    <img class="option-icon" src="image/icons/more-options.png" />
+                    <p class="post-description">E que venha o carnaval 2021</p>
+                    <img class="post-image"
+                        src="https://viroupauta.com/wp-content/uploads/2020/12/Erick-Jacquin-faz-homenagem-a-mandioca.jpg" />
+                    <p class="likes">5</p>
+                    <img class="like-button" src="image/icons/like-preto.png" />
+                    <img class="comp-button" src="image/icons/comp-preto.png" />
+                    <textarea class="comment"></textarea>
+                    <button class="butao">Enviar</button>
+                </div>
+                <div class="post">
+                    <img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
+                    <p class="username">Erick Jacquin</p>
+                    <img class="option-icon" src="image/icons/more-options.png" />
+                    <p class="post-description">Eu vo mata o batima</p>
+                    <img class="post-image" src="https://pbs.twimg.com/media/EHgX6zZXUAEtijc.jpg" />
+                    <p class="likes">5</p>
+                    <img class="like-button" src="image/icons/like-preto.png" />
+                    <img class="comp-button" src="image/icons/comp-preto.png" />
+                    <textarea class="comment"></textarea>
+                    <button class="butao">Enviar</button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="left">
+            <nav>
+                <ul id="sidebar-menu">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="image/pefil.svg" />
+                            <a href="index.html">Página Inicial</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="image/mensagem.svg" />
+                            <a href="#">Mensagens</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="image/salvar.svg" />
+                            <a href="#">Itens Salvos</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</body>
+
+</html>
