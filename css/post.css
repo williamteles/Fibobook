@@ -56,6 +56,8 @@
 	grid-column: 1/3;
 	resize: none;
 	border-radius: 7px;
+	padding-top: 2px;
+	padding-left: 2px;
 }
 
 .butao {
@@ -68,6 +70,8 @@
 	margin-top: 10px;
 	margin-left: 15px;
 	border: none;
+	border-radius: 15px;
+
 }
 
 .option-icon {

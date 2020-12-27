@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Segoe UI Historic|Segoe UI");
+
 body {
     height: 100vh;
     background-color: var(--background);
@@ -19,3 +21,40 @@ main {
 	align-items: center;
 }
 
+.create-post {
+	background-color: white;
+    width: 80%;
+    height: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	display: grid;
+    grid-template-rows: 40px auto;
+	grid-template-columns: 30px auto 50px;
+	row-gap: 10px;
+	column-gap: 10px;
+}
+
+.create-description {
+    grid-row: 1;
+	grid-column: 2/4;
+    padding-left:2px;
+    padding-top:2px;
+	resize: none;
+	border-radius: 7px;
+    margin-top: 3px;
+    font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+
+.post-button {
+    grid-row: 2;
+    grid-column: 3;
+    height: 30px;
+    width: 50px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+	border-radius: 15px;
+}
