@@ -31,26 +31,27 @@ main {
 	padding: 10px;
 	display: grid;
     grid-template-rows: 40px auto;
-	grid-template-columns: 30px auto 50px;
+	grid-template-columns: 30px 30px 30px 30px auto 50px;
 	row-gap: 10px;
 	column-gap: 10px;
 }
 
 .create-description {
     grid-row: 1;
-	grid-column: 2/4;
+	grid-column: 2/-1;
     padding-left:2px;
     padding-top:2px;
 	resize: none;
 	border-radius: 7px;
     margin-top: 3px;
     font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
+	width: 100%;
 }
 
 
 .post-button {
     grid-row: 2;
-    grid-column: 3;
+    grid-column: -2;
     height: 30px;
     width: 50px;
     color: white;
@@ -62,3 +63,29 @@ main {
 .post-button:hover {
 	filter: brightness(120%);
 }
+
+#media-icon {
+	grid-column: 2;
+}
+
+.create-post svg {
+	width: 25px;
+	height: 25px;
+}
+
+.create-post svg:hover {
+	fill: var(--primary-color);
+}
+
+#gif-icon {
+	border: 2px solid black;
+}
+
+#gif-icon:hover {
+	border-color: var(--primary-color);
+}
+
+#home-icon {
+	fill: var(--primary-color);
+}
+

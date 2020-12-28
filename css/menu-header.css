@@ -18,8 +18,9 @@ header {
 }
 
 #logo {
-    width: 65px;
-    height: 60px;
+    width: 160px;
+    height: 55px;
+    margin-left:5px;
 }
 
 input{

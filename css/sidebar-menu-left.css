@@ -41,3 +41,15 @@ nav {
 	margin-right: 10px;
 }
 
+.left-sidebar-icons {
+	height: 40px;
+	width: 40px;
+	fill: white;
+	margin-right: 10px;
+}
+
+.left-sidebar-icons:hover {
+	fill: var(--primary-color);
+}
+
+
