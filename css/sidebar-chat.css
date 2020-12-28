@@ -10,7 +10,9 @@
     background-color: transparent;
     grid-column: 3;
     grid-row: 2;
-	position: relative;
+    position: relative;
+    width: min-content;
+    height: min-content;
 }
 
 h3{
@@ -44,7 +46,6 @@ h3{
 	color: var(--primary-color);
 }
 
-
 .chat-image {
     border-radius: 100px;
     width: 30px;
@@ -52,3 +53,10 @@ h3{
     margin-right: 5px;
 }
 
+.status-circle {
+    width: 40px;
+    height: 40px;
+    padding-top: 11px;
+    margin-left: 20px;
+    fill: #43b581;
+}
