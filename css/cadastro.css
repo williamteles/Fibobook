@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background-color: var(--primary-color);
+    background-color: var(--background);
 
     /* margin-left: 35px; */
 
@@ -31,7 +31,7 @@ body {
     height: 550px;
     padding: 24px;
 
-    background-color: #41d776;
+    background-color: #17bf63;
 
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
