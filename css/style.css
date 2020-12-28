@@ -45,6 +45,7 @@ main {
 	border-radius: 7px;
     margin-top: 3px;
     font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
+	width: 100%;
 }
 
 
@@ -82,5 +83,9 @@ main {
 
 #gif-icon:hover {
 	border-color: var(--primary-color);
+}
+
+#home-icon {
+	fill: var(--primary-color);
 }
 
