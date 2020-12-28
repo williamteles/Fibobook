@@ -18,8 +18,9 @@ header {
 }
 
 #logo {
-    width: 160px;
-    height: 55px;
+    padding-top: 5px;
+    width: 170px;
+    height: 60px;
     margin-left:5px;
 }
 
@@ -31,9 +32,9 @@ input{
     border-radius: 20px;
     height: 35px;
     width: 350px;
-	margin-left: 80px;
+	margin-left: 20px;
     padding-left: 10px;
-    
+    font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .perfil {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Segoe UI Historic|Segoe UI");
+
 a {
 	color: white;
 	text-decoration: none;
@@ -33,6 +35,12 @@ nav {
 .sidebar-menu-item {
 	display: flex;	
 	align-items: center;
+}
+
+.sidebar-menu-item a {
+	display: flex;	
+	align-items: center;
+	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .sidebar-menu-item img {
