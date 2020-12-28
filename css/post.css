@@ -76,7 +76,10 @@
 	margin-left: 15px;
 	border: none;
 	border-radius: 15px;
+}
 
+.butao:hover {
+	filter: brightness(120%);
 }
 
 .option-icon {

@@ -58,3 +58,7 @@ main {
     border: none;
 	border-radius: 15px;
 }
+
+.post-button:hover {
+	filter: brightness(120%);
+}
