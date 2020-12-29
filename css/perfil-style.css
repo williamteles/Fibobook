@@ -11,8 +11,6 @@ header {
 body {
     height: 100vh;
     background-color: var(--background);
-
-    /* margin-left: 35px; */
 }
 
 .container {
@@ -26,9 +24,7 @@ main {
     background:#242526;
     grid-column: 2;
     border-radius: 10px;
-    height: 245vh;
-    /* border-top: 6px groove #18191a; */
-    
+	height: min-content;
 }
 
 .images-perfil {
