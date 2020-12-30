@@ -122,3 +122,7 @@ footer {
 .post {
 	width: 100%;
 }
+
+.options:hover a {
+	color: var(--primary-color);
+}
