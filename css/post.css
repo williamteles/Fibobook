@@ -42,12 +42,14 @@
     width: 25px;
     height: 25px;
 	margin-left: 5px;
+	
 }
 
-.like-button:hover {
+
+/* .like-button:hover {
     fill: var(--primary-color);
 }
-
+ */
 
 .comp-button {
 	grid-row: 4;
@@ -86,6 +88,43 @@
 .option-icon {
 	height: 30px;
 	grid-column: -2;
+	/* position: relative; */
+	display: inline-block;
+	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.drop-icon {
+	height: 30px;
+	cursor: pointer;
+}
+
+.drop-items {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 100px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.drop-items a {
+	color: black;
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.drop-items a:hover {
+	background-color: var(--primary-color);
+}
+
+.option-icon:hover .drop-items{
+	display: block;
+}
+
+.option-icon:hover .drop-icon{
+	background-color: #f1f1f1;
+	border-radius: 20px;
 }
 
 .username {

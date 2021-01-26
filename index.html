@@ -26,36 +26,52 @@
 			</div>
 		</header>
 		<main>
-			<div class="create-post">
+			<div class="create-post" id="create-post">
 				<img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
-				<textarea class="create-description" placeholder="No que está pensando?"></textarea>
-				<svg xmlns="http://www.w3.org/2000/svg" id = "media-icon" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
-				  <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-				  <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+				<textarea class="create-description" placeholder="No que está pensando?" id="create-text"></textarea>
+				<svg xmlns="http://www.w3.org/2000/svg" id="media-icon" fill="currentColor" class="bi bi-image"
+					viewBox="0 0 16 16">
+					<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+					<path
+						d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
 				</svg>
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-				  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-				  <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+					<path
+						d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
 				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" id = "gif-icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11.5 9H13 v6h				  -1.5V9zM10 9H5v6h5v-3H8.5v1.5h-2v-3H10V9zm9 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1h3z"/></svg>
-				<button class="post-button">Postar</button>
+				<svg xmlns="http://www.w3.org/2000/svg" id="gif-icon" viewBox="0 0 24 24">
+					<path d="M0 0h24v24H0V0z" fill="none" />
+					<path
+						d="M11.5 9H13 v6h				  -1.5V9zM10 9H5v6h5v-3H8.5v1.5h-2v-3H10V9zm9 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1h3z" />
+				</svg>
+				<button class="post-button" onclick="addPost()">Postar</button>
 			</div>
+
+
 			<div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Alex.jpg" />
 				<p class="username">Alex Emanuel</p>
-				<img class="option-icon" src="image/icons/more-options.png" />
+				<div class="option-icon">
+					<img class="drop-icon" src="image/icons/more-options.png" />
+					<div class="drop-items">
+						<a href="#">Apagar</a>
+						<a href="#">Editar</a>
+						<a href="#">Salvar</a>
+					</div>
+				</div>
 				<p class="post-description">Finalmente terminei mais um projeto!</p>
-				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
+				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" onclick="iLike()" id="likes" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
 						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
-				<p class="likes">16</p>
+				<p class="likes" id="likesCount">16</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
 			</div>
-			<div class="post">
+			<!-- <div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
 				<p class="username">Erick Jacquin</p>
 				<img class="option-icon" src="image/icons/more-options.png" />
@@ -184,7 +200,7 @@
 				<img class="comp-button" src="image/icons/comp-preto.png" />
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
-			</div>
+			</div> -->
 		</main>
 
 		<aside class="left">
@@ -192,19 +208,30 @@
 				<ul id="sidebar-menu">
 					<li>
 						<div class="sidebar-menu-item">
-							<svg xmlns="http://www.w3.org/2000/svg" id = "home-icon" class = "left-sidebar-icons" viewBox="0 0 24 24" id = "teste"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" id="home-icon" class="left-sidebar-icons"
+								viewBox="0 0 24 24" id="teste">
+								<path d="M0 0h24v24H0z" fill="none" />
+								<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+							</svg>
 							<a href="#">Página Inicial</a>
 						</div>
 					</li>
 					<li>
 						<div class="sidebar-menu-item">
-							<svg xmlns="http://www.w3.org/2000/svg" class = "left-sidebar-icons" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" class="left-sidebar-icons" viewBox="0 0 24 24">
+								<path d="M0 0h24v24H0z" fill="none" />
+								<path
+									d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+							</svg>
 							<a href="#">Mensagens</a>
 						</div>
 					</li>
 					<li>
 						<div class="sidebar-menu-item">
-							<svg xmlns="http://www.w3.org/2000/svg" class = "left-sidebar-icons" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" class="left-sidebar-icons" viewBox="0 0 24 24">
+								<path d="M0 0h24v24H0V0z" fill="none" />
+								<path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+							</svg>
 							<a href="#">Itens Salvos</a>
 						</div>
 					</li>
@@ -253,6 +280,89 @@
 
 		<footer></footer>
 	</div>
+
+	<script src="js/like.js"></script>
+	<script>
+
+		function addPost(){
+			let main = document.querySelector('main')
+
+			// let div_create_post = document.querySelector('.create-post')
+		
+			// div - post
+			let post = document.createElement('div')
+			post.classList.add('post')
+			
+			// img - perfil
+			let img_perfil = document.createElement('img')
+			img_perfil.classList.add('perfil-image')
+			img_perfil.src = 'image/profile-photos/pp-Jacquin.jpg'
+			post.appendChild(img_perfil)
+
+			// p - username
+			let username = document.createElement('p')
+			username.classList.add('username')
+			let name = document.createTextNode('Erick Jacquin')
+			username.appendChild(name)
+			post.appendChild(username)
+
+			// div - option
+			let option = document.createElement('div')
+			option.classList.add('option-icon')
+
+			// img - option [...]
+			let img_option = document.createElement('img')
+			img_option.classList.add('drop-icon')
+			img_option.src = 'image/icons/more-options.png'
+			option.appendChild(img_option)
+
+			// div - drop-items
+			let drop_items = document.createElement('div')
+			drop_items.classList.add('drop-items')
+			
+			// a - items
+			items = ['Apagar','Editar','Salvar']
+				
+			for (var i = 0; i < items.length;i++){
+				let item = document.createElement('a')
+				let current_item = document.createTextNode(items[i])
+				item.appendChild(current_item)
+				drop_items.appendChild(item)
+			}
+			
+			option.appendChild(drop_items)
+			post.appendChild(option)
+
+
+			// p - description
+			let description = document.createElement('p')
+			description.classList.add('post-description')
+			let description_text = document.createTextNode(document.getElementById('create-text').value)
+			description.appendChild(description_text)
+			post.appendChild(description)
+
+			// svg - like
+			let like = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+			like.classList.add('like-button')
+			like.setAttribute('viewbox', '0 0 24 24')
+
+			let path_svg_1 = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+			path_svg_1.setAttribute('d', 'M0 0h24v24H0V0z')
+			path_svg_1.setAttribute('fill', 'none')
+			like.appendChild(path_svg_1)
+
+			let path_svg_2 = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+			path_svg_2.setAttribute('d','M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z')
+			like.appendChild(path_svg_2)
+			post.appendChild(like)
+
+			main.appendChild(post)
+			
+			// main.insertBefore(div, div_create_post)d
+			
+
+		}
+	</script>
 </body>
 
 </html>
