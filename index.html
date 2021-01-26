@@ -345,6 +345,7 @@
 			let like = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 			like.classList.add('like-button')
 			like.setAttribute('viewbox', '0 0 24 24')
+			like.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
 
 			let path_svg_1 = document.createElementNS('http://www.w3.org/2000/svg', 'path')
 			path_svg_1.setAttribute('d', 'M0 0h24v24H0V0z')
@@ -355,6 +356,31 @@
 			path_svg_2.setAttribute('d','M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z')
 			like.appendChild(path_svg_2)
 			post.appendChild(like)
+
+			// p - likes_qnt
+			let likes_qnt = document.createElement('p')
+			likes_qnt.classList.add('likes')
+			let likes_qnt_text = document.createTextNode('0')
+			likes_qnt.appendChild(likes_qnt_text)
+			post.appendChild(likes_qnt)
+
+			// img - share
+			let share_img = document.createElement('img')
+			share_img.classList.add('comp-button')
+			share_img.src = 'image/icons/comp-preto.png'
+			post.appendChild(share_img)
+
+			// textarea - comment
+			let comment = document.createElement('textarea')
+			comment.classList.add('comment')
+			post.appendChild(comment)
+
+			// button - enviar comentario
+			let botao_comment = document.createElement('button')
+			botao_comment.classList.add('butao')
+			let botao_comment_text = document.createTextNode('Enviar')
+			botao_comment.appendChild(botao_comment_text)
+			post.appendChild(botao_comment)
 
 			main.appendChild(post)
 			
