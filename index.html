@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				<p class="post-description">Finalmente terminei mais um projeto!</p>
-				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" onclick="iLike()" id="likes" viewBox="0 0 24 24">
+				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" onclick="iLike(this)" id="likes" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
 						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
@@ -281,10 +281,10 @@
 		<footer></footer>
 	</div>
 
-	<script src="js/like.js"></script>
 	<script>
-
+		let id_number = 1
 		function addPost(){
+			
 			let main = document.querySelector('main')
 
 			// let div_create_post = document.querySelector('.create-post')
@@ -325,6 +325,7 @@
 				
 			for (var i = 0; i < items.length;i++){
 				let item = document.createElement('a')
+				item.setAttribute('href', '#')
 				let current_item = document.createTextNode(items[i])
 				item.appendChild(current_item)
 				drop_items.appendChild(item)
@@ -346,6 +347,8 @@
 			like.classList.add('like-button')
 			like.setAttribute('viewbox', '0 0 24 24')
 			like.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+			like.setAttribute('id', 'likes'+ id_number)
+			like.setAttribute('onclick', 'iLike(this)')
 
 			let path_svg_1 = document.createElementNS('http://www.w3.org/2000/svg', 'path')
 			path_svg_1.setAttribute('d', 'M0 0h24v24H0V0z')
@@ -360,6 +363,7 @@
 			// p - likes_qnt
 			let likes_qnt = document.createElement('p')
 			likes_qnt.classList.add('likes')
+			likes_qnt.setAttribute('id', 'likesCount'+id_number)
 			let likes_qnt_text = document.createTextNode('0')
 			likes_qnt.appendChild(likes_qnt_text)
 			post.appendChild(likes_qnt)
@@ -384,11 +388,12 @@
 
 			main.appendChild(post)
 			
-			// main.insertBefore(div, div_create_post)d
+			id_number = id_number + 1
+			// main.insertBefore(div, div_create_post)
 			
-
 		}
 	</script>
+	<script src="js/like.js"></script>
 </body>
 
 </html>
