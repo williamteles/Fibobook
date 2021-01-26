@@ -1,6 +1,10 @@
 let id_number = 1
 function addPost() {
 
+    let create_post_text = document.getElementById('create-text')
+    let post_description = create_post_text.value
+    create_post_text.value = ''
+
     let main = document.querySelector('main')
 
     // let div_create_post = document.querySelector('.create-post')
@@ -54,7 +58,7 @@ function addPost() {
     // p - description
     let description = document.createElement('p')
     description.classList.add('post-description')
-    let description_text = document.createTextNode(document.getElementById('create-text').value)
+    let description_text = document.createTextNode(post_description)
     description.appendChild(description_text)
     post.appendChild(description)
 
