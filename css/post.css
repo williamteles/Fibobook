@@ -44,7 +44,7 @@
     width: 25px;
     height: 25px;
 	margin-left: 5px;
-	
+	fill: #18191a;
 }
 
 .comp-button {
@@ -139,8 +139,6 @@
 	grid-row-gap: 20px;
 	background-color: #f9f9f9;
 	border-top: 1px solid #000000;
-	
-
 }
 
 .perfil-image-comment {
