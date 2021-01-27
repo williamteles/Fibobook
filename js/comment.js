@@ -1,12 +1,13 @@
 
-function addComment(){
+function addComment(buttonComment){
 
-    let comment_area = document.querySelector('.comment-area')
+    let id = String(buttonComment.id).split('botao').pop()
 
-    let create_comment_text = document.getElementById('comment')
+    let comment_area = document.getElementById('comment-area' + id)
+
+    let create_comment_text = document.getElementById('comment' + id)
     let comment_text = create_comment_text.value
     create_comment_text.value = ''
-
 
     let perfil_image = document.createElement('img')
     perfil_image.classList.add('perfil-image-comment')
@@ -25,9 +26,7 @@ function addComment(){
 
     comment_post.appendChild(comment_post_text)
 
-    comment_area.setAttribute('style', 'height: 50px')
+    comment_area.setAttribute('style', 'height: 60px')
     comment_area.append(comment_post)        
 
 }
-
-// foto - nome : kjfdkjfkdjfkjd

@@ -61,12 +61,20 @@ function addPost() {
     description.appendChild(description_text)
     post.appendChild(description)
 
-    // svg - like
+    /*
+    // img - post image
+    let img_post = document.createElement('img')
+    img_post.classList.add('post-image')
+    post.appendChild(img_post)
+    */
+
+    // svg - like button
     let like = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
     like.classList.add('like-button')
     like.setAttribute('viewbox', '0 0 24 24')
     like.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
     like.setAttribute('id', 'likes' + id_number)
+    like.setAttribute('style', 'fill: rgb(24, 25, 26);')
     like.setAttribute('onclick', 'iLike(this)')
 
     let path_svg_1 = document.createElementNS('http://www.w3.org/2000/svg', 'path')
@@ -79,7 +87,7 @@ function addPost() {
     like.appendChild(path_svg_2)
     post.appendChild(like)
 
-    // p - likes_qnt
+    // p - likes quantity
     let likes_qnt = document.createElement('p')
     likes_qnt.classList.add('likes')
     likes_qnt.setAttribute('id', 'likesCount' + id_number)
@@ -93,25 +101,27 @@ function addPost() {
     share_img.src = 'image/icons/comp-preto.png'
     post.appendChild(share_img)
 
-    //div - comment-area
+    // div - comment-area
     let comment_area = document.createElement('div')
     comment_area.classList.add('comment-area')
+    comment_area.setAttribute('id', 'comment-area' + id_number)
     post.appendChild(comment_area)
 
     // textarea - comment
     let comment = document.createElement('textarea')
     comment.classList.add('comment')
-    comment.setAttribute('id', 'comment')
+    comment.setAttribute('id', 'comment' + id_number)
     post.appendChild(comment)
 
     // button - enviar comentario
     let botao_comment = document.createElement('button')
     botao_comment.classList.add('butao')
-    botao_comment.setAttribute('onclick', 'addComment()')
+    botao_comment.setAttribute('id', 'botao' + id_number)
+    botao_comment.setAttribute('onclick', 'addComment(this)')
     let botao_comment_text = document.createTextNode('Enviar')
     botao_comment.appendChild(botao_comment_text)
     post.appendChild(botao_comment)
-    
+
     main.prepend(div_create_post, post)
     id_number = id_number + 1
 
