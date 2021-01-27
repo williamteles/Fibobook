@@ -6,8 +6,7 @@ function addPost() {
     create_post_text.value = ''
 
     let main = document.querySelector('main')
-
-    // let div_create_post = document.querySelector('.create-post')
+    let div_create_post = document.querySelector('.create-post')
 
     // div - post
     let post = document.createElement('div')
@@ -94,21 +93,26 @@ function addPost() {
     share_img.src = 'image/icons/comp-preto.png'
     post.appendChild(share_img)
 
+    //div - comment-area
+    let comment_area = document.createElement('div')
+    comment_area.classList.add('comment-area')
+    post.appendChild(comment_area)
+
     // textarea - comment
     let comment = document.createElement('textarea')
     comment.classList.add('comment')
+    comment.setAttribute('id', 'comment')
     post.appendChild(comment)
 
     // button - enviar comentario
     let botao_comment = document.createElement('button')
     botao_comment.classList.add('butao')
+    botao_comment.setAttribute('onclick', 'addComment()')
     let botao_comment_text = document.createTextNode('Enviar')
     botao_comment.appendChild(botao_comment_text)
     post.appendChild(botao_comment)
-
-    main.appendChild(post)
-
+    
+    main.prepend(div_create_post, post)
     id_number = id_number + 1
-    // main.insertBefore(div, div_create_post)
 
 }
