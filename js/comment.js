@@ -1,32 +1,35 @@
 
-function addComment(buttonComment){
+function addComment(buttonComment) {
+    let id = String(buttonComment.id).split('botao').pop();
+    let create_comment_text = document.getElementById('comment' + id);
 
-    let id = String(buttonComment.id).split('botao').pop()
+    if (create_comment_text.value == '') {
+        alert('Preencha o campo de comentário para poder comentar.')
 
-    let comment_area = document.getElementById('comment-area' + id)
+    } else {
+        let comment_area = document.getElementById('comment-area' + id);
 
-    let create_comment_text = document.getElementById('comment' + id)
-    let comment_text = create_comment_text.value
-    create_comment_text.value = ''
+        let comment_text = create_comment_text.value;
+        create_comment_text.value = '';
 
-    let perfil_image = document.createElement('img')
-    perfil_image.classList.add('perfil-image-comment')
-    perfil_image.src = 'image/profile-photos/pp-Jacquin.jpg'
-    comment_area.appendChild(perfil_image)
+        let perfil_image = document.createElement('img');
+        perfil_image.classList.add('perfil-image-comment');
+        perfil_image.src = 'image/profile-photos/pp-Jacquin.jpg';
+        comment_area.appendChild(perfil_image);
 
-    let username = document.createElement('p')
-    username.classList.add('username-comment')
-    let name = document.createTextNode('Erick Jacquin')
-    username.appendChild(name)
-    comment_area.appendChild(username)
+        let username = document.createElement('p');
+        username.classList.add('username-comment');
+        let name = document.createTextNode('Erick Jacquin');
+        username.appendChild(name);
+        comment_area.appendChild(username);
 
-    let comment_post = document.createElement('p')
-    comment_post.classList.add('comment-post')
-    let comment_post_text = document.createTextNode(comment_text)
+        let comment_post = document.createElement('p');
+        comment_post.classList.add('comment-post');
+        let comment_post_text = document.createTextNode(comment_text);
 
-    comment_post.appendChild(comment_post_text)
+        comment_post.appendChild(comment_post_text);
 
-    comment_area.setAttribute('style', 'height: 60px')
-    comment_area.append(comment_post)        
-
+        comment_area.setAttribute('style', 'height: 60px');
+        comment_area.append(comment_post);
+    }
 }

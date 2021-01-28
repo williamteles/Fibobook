@@ -50,8 +50,8 @@
 .comp-button {
 	grid-row: 4;
 	grid-column: 3/5;
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 }
 
 .comment {
@@ -82,7 +82,7 @@
 }
 
 .option-icon {
-	height: 30px;
+	height: 40px;
 	grid-column: -2;
 	/* position: relative; */
 	display: inline-block;
