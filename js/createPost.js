@@ -1,5 +1,3 @@
-let id_number = 1;
-
 function addPost() {
 
     let create_post_text = document.getElementById('create-text');
@@ -17,7 +15,6 @@ function addPost() {
         // div - post
         let post = document.createElement('div');
         post.classList.add('post');
-        post.setAttribute('id', 'post' + id_number);
 
         // img - perfil
         let img_perfil = document.createElement('img');
@@ -52,7 +49,6 @@ function addPost() {
         for (var i = 0; i < items.length; i++) {
             let item = document.createElement('a');
             item.setAttribute('href', '#');
-            item.setAttribute('onclick', 'optionsChoice(this, ' + id_number + ')');
             let current_item = document.createTextNode(items[i]);
             item.appendChild(current_item);
             drop_items.appendChild(item);
@@ -61,11 +57,9 @@ function addPost() {
         option.appendChild(drop_items);
         post.appendChild(option);
 
-
         // p - description
         let description = document.createElement('p');
         description.classList.add('post-description');
-        description.setAttribute('id', 'description' + id_number);
         let description_text = document.createTextNode(post_description);
         description.appendChild(description_text);
         post.appendChild(description);
@@ -82,7 +76,6 @@ function addPost() {
         like.classList.add('like-button');
         like.setAttribute('viewbox', '0 0 24 24');
         like.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        like.setAttribute('id', 'likes' + id_number);
         like.setAttribute('style', 'fill: rgb(24, 25, 26);');
         like.setAttribute('onclick', 'iLike(this)');
 
@@ -99,7 +92,6 @@ function addPost() {
         // p - likes quantity
         let likes_qnt = document.createElement('p');
         likes_qnt.classList.add('likes');
-        likes_qnt.setAttribute('id', 'likesCount' + id_number);
         let likes_qnt_text = document.createTextNode('0');
         likes_qnt.appendChild(likes_qnt_text);
         post.appendChild(likes_qnt);
@@ -119,35 +111,25 @@ function addPost() {
         path_svg_2.setAttribute('fill', '#000000');
         comp.appendChild(path_svg_2);
         post.appendChild(comp);
-        /*
-        // img - share
-        let share_img = document.createElement('img');
-        share_img.classList.add('comp-button');
-        share_img.src = 'image/icons/comp-preto.png';
-        post.appendChild(share_img);
-*/
+        
         // div - comment-area
         let comment_area = document.createElement('div');
         comment_area.classList.add('comment-area');
-        comment_area.setAttribute('id', 'comment-area' + id_number);
         post.appendChild(comment_area);
 
         // textarea - comment
         let comment = document.createElement('textarea');
         comment.classList.add('comment');
-        comment.setAttribute('id', 'comment' + id_number);
         post.appendChild(comment);
 
         // button - enviar comentario
         let botao_comment = document.createElement('button');
         botao_comment.classList.add('butao');
-        botao_comment.setAttribute('id', 'botao' + id_number);
         botao_comment.setAttribute('onclick', 'addComment(this)');
         let botao_comment_text = document.createTextNode('Enviar');
         botao_comment.appendChild(botao_comment_text);
         post.appendChild(botao_comment);
 
         main.prepend(div_create_post, post);
-        id_number = id_number + 1;
     }
 }

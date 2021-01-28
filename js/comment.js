@@ -1,13 +1,14 @@
 
 function addComment(buttonComment) {
-    let id = String(buttonComment.id).split('botao').pop();
-    let create_comment_text = document.getElementById('comment' + id);
+    
+    let post = buttonComment.parentNode;
+    let create_comment_text = post.querySelector('.comment');
 
     if (create_comment_text.value == '') {
         alert('Preencha o campo de comentário para poder comentar.')
 
     } else {
-        let comment_area = document.getElementById('comment-area' + id);
+        let comment_area = post.querySelector('.comment-area');
 
         let comment_text = create_comment_text.value;
         create_comment_text.value = '';

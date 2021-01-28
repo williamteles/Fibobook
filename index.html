@@ -29,12 +29,13 @@
 			<div class="create-post" id="create-post">
 				<img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
 				<textarea class="create-description" placeholder="No que está pensando?" id="create-text"></textarea>
-				<svg xmlns="http://www.w3.org/2000/svg" id="media-icon" fill="currentColor" class="bi bi-image"
+				<svg xmlns="http://www.w3.org/2000/svg" id="media-icon" fill="currentColor" class="upload-image"
 					viewBox="0 0 16 16">
 					<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
 					<path
 						d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
 				</svg>
+				<input type="file" style="display: none;" class="upload-file">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
 					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 					<path
@@ -48,7 +49,7 @@
 				<button class="post-button" onclick="addPost()">Postar</button>
 			</div>
  
-			<div class="post">
+			<!-- <div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Alex.jpg" />
 				<p class="username">Alex Emanuel</p>
 				<div class="option-icon">
@@ -73,7 +74,7 @@
 						</svg>
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
-			</div> 
+			</div>  -->
 			<!-- <div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
 				<p class="username">Erick Jacquin</p>
@@ -288,6 +289,37 @@
 	<script src="js/like.js"></script>
 	<script src="js/comment.js"></script>
 	<script src="js/options.js"></script>
+
+	<script>
+		const file = document.querySelector('.upload-file');
+		const button_svg = document.querySelector('.upload-image')
+		
+		button_svg.addEventListener('click', function(e){
+			if(file) {
+				file.click()
+				console.log('debug')
+			}
+			e.preventDefault()
+		},false)
+		
+		file.addEventListener('change', handleFiles, false)
+		
+		function handleFiles(){
+			let img = document.createElement('img')
+			img.src = URL.createObjectURL(this.files[0])
+			// img.classList.add('post-image')
+			img.height = 200
+			img.setAttribute('style', 'grid-row: 3; grid-column: 3')
+			img.setAttribute
+			img.onload = function() {
+				URL.revokeObjectURL(this.src)
+			}
+
+		
+			document.querySelector('.create-post').appendChild(img)
+			
+		}
+		</script>
 </body>
 
 </html>

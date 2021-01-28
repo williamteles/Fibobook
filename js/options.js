@@ -1,6 +1,6 @@
-function optionsChoice(optionElement, idPost) {
+function optionsChoice(optionElement) {
 
-    post = optionElement.parentNode.parentNode.parentNode
+    let post = optionElement.parentNode.parentNode.parentNode;
 
     switch (optionElement.innerText) {
         case "Apagar":
