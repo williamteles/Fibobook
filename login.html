@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro-modal.css">
     <title>Login</title>
 </head>
 <body>
@@ -20,16 +22,84 @@
                     <label for="password">Senha</label>
                     <input type="password" id="login-password">
                 </div>
-            
-                <button type="submit" class="btn-login">Entrar</button>
+             
+                <div class="footer">
+                    <button type="submit" class="btn-login">Entrar</button>
+                    <a href="#" id="singUp-link">Sing Up</a>    
+                </div>    
+                
             </form>
         </div>
     </section>
+
+    <div id="modal" class="hide">
+
+        <div class="container">
+            <div class="left-wrapper">
+                <section class="headers">
+                    <h1>Bem vindo ao FiboBook.</h1>
+                    <h3>A rede social mais aleatória possível</h3>
+                </section>
+    
+                <section class="content">
+                    <h3>Aqui você encontra:</h3>
+                    <ul>
+                        <li>Memes de alta qualidade</li>
+                        <li>Piadas sem graça, porém, engraçadas</li>
+                        <li>O melhor da comunidade web</li>
+                    </ul>
+                </section>
+            </div>
+    
+            <div class="right-wrapper">
+                <form action="">
+                    
+                    <div class="image">
+                        <img src="image/logo2.png" alt="">
+                        <h2>FiboBook</h2>
+                    </div>
+                    <legend>
+                        <h4>Sing Up</h4>
+                    </legend>                
+                    <fieldset>
+                        <form action="" class="modal-form">
+                            <div class="field-group">
+                                <div class="field">
+                                    <input type="text" name="name" required>
+                                    <label for="name">Nome</label>
+                                   
+                                </div> 
+                    
+                                <div class="field">
+                                    <input type="email" name="email" required>
+                                    <label for="Email">Email</label>
+                                    
+                                </div>
+                    
+                    
+                                <div class="field">
+                                    <input type="password" name="password" required>
+                                    <label for="password">Senha</label>
+                                </div>
+        
+                                <button type="submit">Cadastro</button>
+                            </div>
+                        </form>
+                        
+                        
+                    </fieldset>
+    
+    
+                </form>
+            </div>
+        </div>
+    </div>
 
     <ul class="squares">
     </ul>
 
     <script src="js/script.js"></script>
     <script src="js/squareAnimation.js"></script>
+    <script src="js/modal-appearence.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ body {
 
 body {
   background-color: #18191a;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Roboto;
 }
 
 section {
@@ -62,7 +62,13 @@ form .input-block input {
   outline-color: var(--primary-color);
 }
 
-form .btn-login {
+form .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form .footer .btn-login {
   display: block;
   width: 220px;
   height: 35px;
@@ -70,8 +76,15 @@ form .btn-login {
   background-color: var(--primary-color);
   color: white;
   border-radius: 25px;
-  margin: auto;
+  margin-left: 115px;
   padding: 7px;
+}
+
+form .footer a {
+  /* text-decoration: none; */
+  color: #1CDF74;
+  font-style: italic;
+
 }
 
 /* APARIÇÃO DO FORM */
