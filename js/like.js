@@ -1,16 +1,18 @@
 function iLike(buttonLike) {
 
-	let id = String(buttonLike.id).split("likes").pop()
-	let qutLikes = parseInt(document.getElementById('likesCount' + id).innerText)
+	let post = buttonLike.parentNode
+	let like = post.querySelector('.likes')
+	 
+	let qutLikes = parseInt(like.innerText);
 
-	if (document.getElementById('likes' + id).style.fill == "rgb(24, 25, 26)") {
-		document.getElementById('likes' + id).style.fill = '#17bf63'
-		qutLikes = qutLikes + 1
-		document.getElementById('likesCount' + id).innerText = qutLikes
+	if (buttonLike.style.fill == "rgb(24, 25, 26)") {
+		buttonLike.style.fill = '#17bf63';
+		qutLikes = qutLikes + 1;
+		like.innerText = qutLikes;
 	} else {
-		document.getElementById('likes' + id).style.fill = '#18191a'
-		qutLikes = qutLikes - 1
-		document.getElementById('likesCount' + id).innerText = qutLikes
+		buttonLike.style.fill = '#18191a';
+		qutLikes = qutLikes - 1;
+		like.innerText = qutLikes;
 	}
 
 }

@@ -29,12 +29,13 @@
 			<div class="create-post" id="create-post">
 				<img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
 				<textarea class="create-description" placeholder="No que está pensando?" id="create-text"></textarea>
-				<svg xmlns="http://www.w3.org/2000/svg" id="media-icon" fill="currentColor" class="bi bi-image"
+				<svg xmlns="http://www.w3.org/2000/svg" id="media-icon" fill="currentColor" class="upload-image"
 					viewBox="0 0 16 16">
 					<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
 					<path
 						d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
 				</svg>
+				<input type="file" multiple accept="image/*" style="display: none;" class="upload-file">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
 					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 					<path
@@ -43,12 +44,12 @@
 				<svg xmlns="http://www.w3.org/2000/svg" id="gif-icon" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M11.5 9H13 v6h				  -1.5V9zM10 9H5v6h5v-3H8.5v1.5h-2v-3H10V9zm9 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1h3z" />
+						d="M11.5 9H13 v6h  -1.5V9zM10 9H5v6h5v-3H8.5v1.5h-2v-3H10V9zm9 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1h3z" />
 				</svg>
 				<button class="post-button" onclick="addPost()">Postar</button>
 			</div>
-<!-- 
-			<div class="post">
+
+			<!-- <div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Alex.jpg" />
 				<p class="username">Alex Emanuel</p>
 				<div class="option-icon">
@@ -64,13 +65,16 @@
 					viewBox="0 0 24 24" style="fill:#18191a;">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+						d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
 				</svg>
 				<p class="likes" id="likesCount">16</p>
-				<img class="comp-button" src="image/icons/comp-preto.png" />
+				<svg class="comp-button" viewBox="0 0 20 20">
+							<path fill="#000000" d="M16.198,10.896c-0.252,0-0.455,0.203-0.455,0.455v2.396c0,0.626-0.511,1.137-1.138,1.137H5.117c-0.627,0-1.138-0.511-1.138-1.137V7.852c0-0.626,0.511-1.137,1.138-1.137h5.315c0.252,0,0.456-0.203,0.456-0.455c0-0.251-0.204-0.455-0.456-0.455H5.117c-1.129,0-2.049,0.918-2.049,2.047v5.894c0,1.129,0.92,2.048,2.049,2.048h9.488c1.129,0,2.048-0.919,2.048-2.048v-2.396C16.653,11.099,16.45,10.896,16.198,10.896z"></path>
+							<path fill="#000000" d="M14.053,4.279c-0.207-0.135-0.492-0.079-0.63,0.133c-0.137,0.211-0.077,0.493,0.134,0.63l1.65,1.073c-4.115,0.62-5.705,4.891-5.774,5.082c-0.084,0.236,0.038,0.495,0.274,0.581c0.052,0.019,0.103,0.027,0.154,0.027c0.186,0,0.361-0.115,0.429-0.301c0.014-0.042,1.538-4.023,5.238-4.482l-1.172,1.799c-0.137,0.21-0.077,0.492,0.134,0.629c0.076,0.05,0.163,0.074,0.248,0.074c0.148,0,0.294-0.073,0.382-0.207l1.738-2.671c0.066-0.101,0.09-0.224,0.064-0.343c-0.025-0.118-0.096-0.221-0.197-0.287L14.053,4.279z"></path>
+						</svg>
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
-			</div> -->
+			</div>  -->
 			<!-- <div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Jacquin.jpg" />
 				<p class="username">Erick Jacquin</p>
@@ -92,7 +96,9 @@
 				<p class="username">William Teles</p>
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">Eu e minha bike</p>
-				<img class="post-image" src="image/post-photos/post-William.jpg" />
+				<div class="post-image-container">
+					<img src="image/post-photos/post-William.jpg" />
+				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
@@ -103,19 +109,19 @@
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
 			</div>
-			<div class="post">
-				<img class="perfil-image" src="image/profile-photos/pp-Gabriel.jpg" />
-				<p class="username">Gabriel Lima</p>
-				<img class="option-icon" src="image/icons/more-options.png" />
-				<p class="post-description">#Starwars</p>
-				<img class="post-image" src="image/post-photos/post-Gabriel.jpg" />
-				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
-					<path d="M0 0h24v24H0V0z" fill="none" />
-					<path
+				<div class="post">
+					<img class="perfil-image" src="image/profile-photos/pp-Gabriel.jpg" />
+					<p class="username">Gabriel Lima</p>
+					<img class="option-icon" src="image/icons/more-options.png" />
+					<p class="post-description">#Starwars</p>
+					<img class="post-image" src="image/post-photos/post-Gabriel.jpg" />
+					<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
+						<path d="M0 0h24v24H0V0z" fill="none" />
+						<path
 						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
-				</svg>
-				<p class="likes">100</p>
-				<img class="comp-button" src="image/icons/comp-preto.png" />
+					</svg>
+					<p class="likes">100</p>
+					<img class="comp-button" src="image/icons/comp-preto.png" />
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
 			</div>
@@ -125,11 +131,11 @@
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">Que banana gostosa</p>
 				<img class="post-image"
-					src="https://f.i.uol.com.br/fotografia/2019/06/06/15598529795cf977b3e9c6c_1559852979_1x1_md.jpg" />
+				src="https://f.i.uol.com.br/fotografia/2019/06/06/15598529795cf977b3e9c6c_1559852979_1x1_md.jpg" />
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">5</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -141,11 +147,13 @@
 				<p class="username">Keiza Analizi</p>
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">Aquele bronze</p>
-				<img class="post-image" src="image/post-photos/post-Keiza.jpg" />
+				<div class="post-image-container">
+					<img  src="image/post-photos/post-Keiza.jpg" />
+				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">323</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -158,11 +166,11 @@
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">E que venha o carnaval 2021</p>
 				<img class="post-image"
-					src="https://viroupauta.com/wp-content/uploads/2020/12/Erick-Jacquin-faz-homenagem-a-mandioca.jpg" />
+				src="https://viroupauta.com/wp-content/uploads/2020/12/Erick-Jacquin-faz-homenagem-a-mandioca.jpg" />
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">5</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -178,7 +186,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">73</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -194,7 +202,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">5</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -284,6 +292,34 @@
 	<script src="js/createPost.js"></script>
 	<script src="js/like.js"></script>
 	<script src="js/comment.js"></script>
+	<script src="js/options.js"></script>
+
+	<script>
+		const file = document.querySelector('.upload-file');
+		const button_svg = document.querySelector('.upload-image')
+
+		button_svg.addEventListener('click', function (e) {
+			if (file) {
+				file.click()
+			}
+			e.preventDefault()
+		}, false)
+
+		file.addEventListener('change', handleFiles, false)
+
+		function handleFiles() {
+			let img = document.createElement('img')
+			img.src = URL.createObjectURL(this.files[0])
+			// img.classList.add('post-image')
+			img.height = 200
+			img.setAttribute('style', 'grid-row: 3; grid-column: 3; border: 2px groove #9a9a9a')
+			img.setAttribute('class', 'uploaded-img')
+			img.onload = function () {
+				URL.revokeObjectURL(this.src)
+			}
+			document.querySelector('.create-post').appendChild(img)
+		}
+	</script>
 </body>
 
 </html>
