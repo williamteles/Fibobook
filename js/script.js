@@ -1,13 +1,40 @@
 const btnLogin = document.querySelector(".btn-login");
 const form = document.querySelector("form");
 
+var emailJacquin = "erickjacquin_tompero@gmail.com";
+var passwordJacquin = "vergonhadaproficion";
+
+// function validateLogin() {
+//   const userEmail = document.getElementById("email");
+//   const userPassword = document.getElementById("login-password");
+
+//   if (userEmail.value != emailJacquin || userPassword.value != passwordJacquin ) {
+//     alert("Ta errado isso aí boy");
+//   }else{
+//     form.action = "index.html";
+//   }
+// }
+
 btnLogin.addEventListener("click", event => {
-  event.preventDefault();
+  // event.preventDefault();
+
 
   const fields = [...document.querySelectorAll(".input-block input")];
-
   fields.forEach(field => {
     if (field.value === "") form.classList.add("validate-error");
+    const userEmail = document.getElementById("email");
+    const userPassword = document.getElementById("login-password");
+  
+    if (userEmail.value != emailJacquin || userPassword.value != passwordJacquin ) {
+      form.classList.add("validate-error");
+      event.preventDefault();
+    }else{
+      form.action = "index.html";
+    }
+    // if (field[0].value == jacquinEmail && field[1].value == jacquinPassword) {
+    //   document.getElementById("form").action = "/index.html"
+    // } 
+      
   });
 
   const formError = document.querySelector(".validate-error");
@@ -20,7 +47,11 @@ btnLogin.addEventListener("click", event => {
   } else {
     form.classList.add("form-hide");
   }
+
+
+  
 });
+
 
 form.addEventListener("animationstart", event => {
   if (event.animationName === "down") {
@@ -34,30 +65,3 @@ form.addEventListener("animationend", event => {
     document.querySelector("body").style.overflow = "none";
   }
 });
-
-// squares
-const ulSquares = document.querySelector("ul.squares")
-
-for (let i = 0; i < 50; i++) {
-    const li = document.createElement("li");
-
-    const random = (min, max) => Math.random() * (max -min) + min;
-    const size = Math.floor(random(10, 120));
-
-    const position = random(1, 99);
-
-    const delay = random(5, 0.1);
-    const duration = random(24, 12);
-
-    li.style.width = `${size}px`;
-    li.style.height = `${size}px`;
-    li.style.bottom = `-${size}px`;
-
-    li.style.left = `${position}%`;
-
-    li.style.animationDelay = `${delay}s`
-    li.style.animationDuration = `${duration}s`
-    li.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`;
-
-    ulSquares.appendChild(li);
-}
