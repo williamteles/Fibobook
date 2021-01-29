@@ -1,6 +1,7 @@
 function addPost() {
 
     let create_post_text = document.getElementById('create-text');
+    let img = document.querySelector('.uploaded-img')
 
     if (create_post_text.value == '') {
         alert('Preencha o campo de texto para poder postar.')
@@ -49,6 +50,7 @@ function addPost() {
         for (var i = 0; i < items.length; i++) {
             let item = document.createElement('a');
             item.setAttribute('href', '#');
+            item.setAttribute('onclick', 'optionsChoice(this)');
             let current_item = document.createTextNode(items[i]);
             item.appendChild(current_item);
             drop_items.appendChild(item);
@@ -64,12 +66,16 @@ function addPost() {
         description.appendChild(description_text);
         post.appendChild(description);
 
-        /*
         // img - post image
-        let img_post = document.createElement('img');
-        img_post.classList.add('post-image');
-        post.appendChild(img_post);
-        */
+        if (!(img == null)) {
+            let img_container = document.createElement('div');
+            img_container.classList.add('post-image-container');
+            let img_post = document.createElement('img');
+            img_post.src = img.src;
+            document.querySelector('.uploaded-img').remove();
+            img_container.appendChild(img_post);
+            post.appendChild(img_container);
+        }
 
         // svg - like button
         let like = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -111,7 +117,7 @@ function addPost() {
         path_svg_2.setAttribute('fill', '#000000');
         comp.appendChild(path_svg_2);
         post.appendChild(comp);
-        
+
         // div - comment-area
         let comment_area = document.createElement('div');
         comment_area.classList.add('comment-area');
