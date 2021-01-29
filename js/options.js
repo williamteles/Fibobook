@@ -8,8 +8,15 @@ function optionsChoice(optionElement) {
             break;
         case "Editar":
             text = prompt("Informe a nova descrição para seu post:");
-            textLocation = post.querySelector('.post-description')
-            textLocation.innerText = text;
+            console.log(text);
+            if (text == null) {
+                return;
+            } else if (text == '') {
+                alert('Você precisa preenher o campo para poder editar seu post.');
+            } else {
+                textLocation = post.querySelector('.post-description');
+                textLocation.innerText = text;
+            }
             break;
         case "Salvar":
             alert("Post Salvo");
