@@ -36,7 +36,7 @@
 						d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
 				</svg>
 				<input type="file" multiple accept="image/*" style="display: none;" class="upload-file">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" id="emoticon" onclick="emoticon()">
 					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 					<path
 						d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
@@ -290,36 +290,12 @@
 	</div>
 
 	<script src="js/createPost.js"></script>
+	<script src="js/upload-image.js"></script>
+	<script src="js/emojis.js"></script>
 	<script src="js/like.js"></script>
 	<script src="js/comment.js"></script>
 	<script src="js/options.js"></script>
 
-	<script>
-		const file = document.querySelector('.upload-file');
-		const button_svg = document.querySelector('.upload-image')
-
-		button_svg.addEventListener('click', function (e) {
-			if (file) {
-				file.click()
-			}
-			e.preventDefault()
-		}, false)
-
-		file.addEventListener('change', handleFiles, false)
-
-		function handleFiles() {
-			let img = document.createElement('img')
-			img.src = URL.createObjectURL(this.files[0])
-			// img.classList.add('post-image')
-			img.height = 200
-			img.setAttribute('style', 'grid-row: 3; grid-column: 3; border: 2px groove #9a9a9a')
-			img.setAttribute('class', 'uploaded-img')
-			img.onload = function () {
-				URL.revokeObjectURL(this.src)
-			}
-			document.querySelector('.create-post').appendChild(img)
-		}
-	</script>
 </body>
 
 </html>

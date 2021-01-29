@@ -135,6 +135,7 @@ function addPost() {
         post.appendChild(botao_comment);
 
         main.prepend(div_create_post, post);
+        document.querySelector('.area-emojis').remove()
     } else {
         alert('Preencha o campo de texto para poder postar.')
     }
