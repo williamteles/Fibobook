@@ -68,15 +68,17 @@
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 }
 
+
+
 .butao {
 	grid-row: 6;
 	grid-column: 3/5;
 	color: white;
 	background-color: var(--primary-color);
 	height: 30px;
-	width: 70%;
-	margin-top: 10px;
-	margin-left: 15px;
+	width: 85%;
+    margin-top: 5px;
+    margin-left: 7px;
 	border: none;
 	border-radius: 15px;
 }
@@ -88,7 +90,6 @@
 .option-icon {
 	height: 40px;
 	grid-column: -2;
-	/* position: relative; */
 	display: inline-block;
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 }

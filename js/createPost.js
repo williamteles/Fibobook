@@ -130,7 +130,7 @@ function addPost() {
         let botao_comment = document.createElement('button');
         botao_comment.classList.add('butao');
         botao_comment.setAttribute('onclick', 'addComment(this)');
-        let botao_comment_text = document.createTextNode('Enviar');
+        let botao_comment_text = document.createTextNode('Comentar');
         botao_comment.appendChild(botao_comment_text);
         post.appendChild(botao_comment);
 

@@ -1,5 +1,5 @@
 function emoticon() {
-    emojis = ['0x1F600', '0x1F602', '0x1F605','0x1F60D', '0x1F60F', '0x1F621', '0x1F62D', '0x1F911']
+    emojis = ['0x1F600', '0x1F602', '0x1F605','0x1F60D', '0x1F60F', '0x1F621', '0x1F62D', '0x1F911','0x1F609','0x1F618','0x1F92F', '0x1F92E','0x1F92C','0x1F921','0x1F920']
     
     if(document.querySelector('.area-emojis') == null){
         let area_emojis = document.createElement('div')
@@ -10,7 +10,7 @@ function emoticon() {
         for (var i = 0; i < emojis.length; i++){
             var emoji = document.createElement('button')
             emoji.setAttribute('onclick', 'addEmoji(this)')
-            emoji.setAttribute('style', 'border: none; outline:none !important')
+            emoji.setAttribute('style', 'border: none; outline:none !important; padding-left: 5px')
             var current_emoji = document.createTextNode(String.fromCodePoint(emojis[i]))
             emoji.appendChild(current_emoji)
             area_emojis.appendChild(emoji)
