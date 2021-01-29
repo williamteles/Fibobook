@@ -35,7 +35,7 @@
 					<path
 						d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
 				</svg>
-				<input type="file" style="display: none;" class="upload-file">
+				<input type="file" multiple accept="image/*" style="display: none;" class="upload-file">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
 					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 					<path
@@ -48,7 +48,7 @@
 				</svg>
 				<button class="post-button" onclick="addPost()">Postar</button>
 			</div>
- 
+
 			<!-- <div class="post">
 				<img class="perfil-image" src="image/profile-photos/pp-Alex.jpg" />
 				<p class="username">Alex Emanuel</p>
@@ -96,7 +96,9 @@
 				<p class="username">William Teles</p>
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">Eu e minha bike</p>
-				<img class="post-image" src="image/post-photos/post-William.jpg" />
+				<div class="post-image-container">
+					<img src="image/post-photos/post-William.jpg" />
+				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
@@ -107,19 +109,19 @@
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
 			</div>
-			<div class="post">
-				<img class="perfil-image" src="image/profile-photos/pp-Gabriel.jpg" />
-				<p class="username">Gabriel Lima</p>
-				<img class="option-icon" src="image/icons/more-options.png" />
-				<p class="post-description">#Starwars</p>
-				<img class="post-image" src="image/post-photos/post-Gabriel.jpg" />
-				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
-					<path d="M0 0h24v24H0V0z" fill="none" />
-					<path
+				<div class="post">
+					<img class="perfil-image" src="image/profile-photos/pp-Gabriel.jpg" />
+					<p class="username">Gabriel Lima</p>
+					<img class="option-icon" src="image/icons/more-options.png" />
+					<p class="post-description">#Starwars</p>
+					<img class="post-image" src="image/post-photos/post-Gabriel.jpg" />
+					<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
+						<path d="M0 0h24v24H0V0z" fill="none" />
+						<path
 						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
-				</svg>
-				<p class="likes">100</p>
-				<img class="comp-button" src="image/icons/comp-preto.png" />
+					</svg>
+					<p class="likes">100</p>
+					<img class="comp-button" src="image/icons/comp-preto.png" />
 				<textarea class="comment"></textarea>
 				<button class="butao">Enviar</button>
 			</div>
@@ -129,11 +131,11 @@
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">Que banana gostosa</p>
 				<img class="post-image"
-					src="https://f.i.uol.com.br/fotografia/2019/06/06/15598529795cf977b3e9c6c_1559852979_1x1_md.jpg" />
+				src="https://f.i.uol.com.br/fotografia/2019/06/06/15598529795cf977b3e9c6c_1559852979_1x1_md.jpg" />
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">5</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -145,11 +147,13 @@
 				<p class="username">Keiza Analizi</p>
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">Aquele bronze</p>
-				<img class="post-image" src="image/post-photos/post-Keiza.jpg" />
+				<div class="post-image-container">
+					<img  src="image/post-photos/post-Keiza.jpg" />
+				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">323</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -162,11 +166,11 @@
 				<img class="option-icon" src="image/icons/more-options.png" />
 				<p class="post-description">E que venha o carnaval 2021</p>
 				<img class="post-image"
-					src="https://viroupauta.com/wp-content/uploads/2020/12/Erick-Jacquin-faz-homenagem-a-mandioca.jpg" />
+				src="https://viroupauta.com/wp-content/uploads/2020/12/Erick-Jacquin-faz-homenagem-a-mandioca.jpg" />
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">5</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -182,7 +186,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">73</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -198,7 +202,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-button" viewBox="0 0 24 24">
 					<path d="M0 0h24v24H0V0z" fill="none" />
 					<path
-						d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+					d="M1 21h4V9H1				  v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-				   .5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 				</svg>
 				<p class="likes">5</p>
 				<img class="comp-button" src="image/icons/comp-preto.png" />
@@ -293,33 +297,30 @@
 	<script>
 		const file = document.querySelector('.upload-file');
 		const button_svg = document.querySelector('.upload-image')
-		
-		button_svg.addEventListener('click', function(e){
-			if(file) {
+
+		button_svg.addEventListener('click', function (e) {
+			if (file) {
 				file.click()
-				console.log('debug')
 			}
 			e.preventDefault()
-		},false)
-		
+		}, false)
+
 		file.addEventListener('change', handleFiles, false)
-		
-		function handleFiles(){
+
+		function handleFiles() {
 			let img = document.createElement('img')
 			img.src = URL.createObjectURL(this.files[0])
 			// img.classList.add('post-image')
 			img.height = 200
-			img.setAttribute('style', 'grid-row: 3; grid-column: 3')
-			img.setAttribute
-			img.onload = function() {
+			img.setAttribute('style', 'grid-row: 3; grid-column: 3; border: 2px groove #9a9a9a')
+			img.setAttribute('class', 'uploaded-img')
+			img.onload = function () {
 				URL.revokeObjectURL(this.src)
 			}
-
-		
 			document.querySelector('.create-post').appendChild(img)
-			
+
 		}
-		</script>
+	</script>
 </body>
 
 </html>
