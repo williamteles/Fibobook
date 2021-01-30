@@ -27,8 +27,7 @@ main {
 	align-items: center;
 }
 
-
-.create-post {
+#create-post {
 	background-color: white;
 	max-width: min-content;
 	min-width: 80%;
@@ -46,7 +45,7 @@ main {
 
 }
 
-.create-description {
+#create-description {
     grid-row: 1;
 	grid-column: 2/-1;
     padding-left:2px;
@@ -58,8 +57,7 @@ main {
 	width: 100%;
 }
 
-
-.post-button {
+#post-button {
     grid-row: 2;
     grid-column: -2;
     height: 30px;
@@ -70,7 +68,7 @@ main {
 	border-radius: 15px;
 }
 
-.post-button:hover {
+#post-button:hover {
 	filter: brightness(120%);
 }
 
@@ -78,12 +76,12 @@ main {
 	grid-column: 2;
 }
 
-.create-post svg {
+#create-post svg {
 	width: 25px;
 	height: 25px;
 }
 
-.create-post svg:hover {
+#create-post svg:hover {
 	fill: var(--primary-color);
 }
 

@@ -10,9 +10,8 @@ function iLike(buttonLike) {
 		qutLikes = qutLikes + 1;
 		like.innerText = qutLikes;
 	} else {
-		buttonLike.style.fill = '#18191a';
+		buttonLike.style.fill = "rgb(24, 25, 26)";
 		qutLikes = qutLikes - 1;
 		like.innerText = qutLikes;
 	}
-
 }
