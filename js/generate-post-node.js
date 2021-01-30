@@ -32,8 +32,7 @@
     let items = ["Apagar", "Editar", "Salvar"];
 
     for(let item of items) {
-        let itemNode = document.createElement("a");           
-        itemNode.href = "#";
+        let itemNode = document.createElement("a");
         itemNode.setAttribute("onclick", "optionsChoice(this)");
         let itemTextNode = document.createTextNode(item);
         itemNode.appendChild(itemTextNode);
