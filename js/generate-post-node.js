@@ -96,7 +96,7 @@
     // Send comment button
     let commentButtonNode = document.createElement("button");
     commentButtonNode.classList.add("butao");
-    commentButtonNode.setAttribute("onclick", "addComment()");
+    commentButtonNode.setAttribute("onclick", "addComment(this)");
     let commentButtonTextNode = document.createTextNode("Enviar");
     commentButtonNode.appendChild(commentButtonTextNode);
     postNode.appendChild(commentButtonNode);

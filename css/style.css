@@ -29,6 +29,8 @@ body {
 	grid-column: 1/-1; 
 	border: 2px groove #9a9a9a; 
 	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
 	border-radius: 5px;
 }
 
