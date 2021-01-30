@@ -11,6 +11,14 @@ body {
     grid-template-rows: 10vh 85vh 5vh;
 }
 
+#uploaded-img {
+	grid-row: 3;
+	grid-column: 1/-1; 
+	border: 2px groove #9a9a9a;
+	width: 100%;
+}
+
+
 main {
     background:#242526;
     grid-column: 2;
