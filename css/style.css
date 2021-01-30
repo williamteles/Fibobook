@@ -12,10 +12,24 @@ body {
 }
 
 #uploaded-img {
-	grid-row: 3;
+	grid-row: 4;
 	grid-column: 1/-1; 
 	border: 2px groove #9a9a9a;
 	width: 100%;
+}
+
+.emojis {
+	border: none; 
+	outline:none !important; 
+	padding-left: 5px
+}
+
+#emojis-area {
+	grid-row: 3; 
+	grid-column: 1/-1; 
+	border: 2px groove #9a9a9a; 
+	display: flex; 
+	border-radius: 5px;
 }
 
 
@@ -46,7 +60,7 @@ main {
 	border-radius: 10px;
 	padding: 10px;
 	display: grid;
-    grid-template-rows: 40px auto auto;
+    grid-template-rows: 40px auto auto auto;
 	grid-template-columns: 30px 30px 30px 30px auto 50px;
 	row-gap: 10px;
 	column-gap: 10px;

@@ -6,7 +6,7 @@ function createNewUserPost() {
     const feedNode = document.querySelector("#feed");
     const postDescriptionNode = document.getElementById("create-description");
     const postImageNode = document.querySelector("#uploaded-img");
-    const emojiAreaNode = document.querySelector("#area-emojis");
+    const emojiAreaNode = document.querySelector("#emojis-area");
 
     let postDescription = postDescriptionNode.value;
     let postImageSrc = postImageNode ? postImageNode.getAttribute("src") : null;
