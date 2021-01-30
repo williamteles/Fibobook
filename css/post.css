@@ -15,6 +15,7 @@
 }
 
 .post-description {
+	color: #000000;
 	grid-row: 2;
 	grid-column: 1/-1;
 	max-width: 520px;
@@ -67,8 +68,6 @@
 	padding-left: 2px;
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 }
-
-
 
 .butao {
 	grid-row: 6;
@@ -129,6 +128,7 @@
 }
 
 .username {
+	color: #000000;
 	margin-top: 3px;
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 	font-weight: bold;
