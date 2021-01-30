@@ -11,12 +11,20 @@ button_svg.addEventListener('click', function (e) {
 file.addEventListener('change', handleFiles, false)
 
 function handleFiles() {
-    let img = document.createElement('img')
-    img.src = window.webkitURL.createObjectURL(this.files[0])
-    img.height = 200
-    img.id = "uploaded-img";
-    img.onload = function () {
+    const imagePreviewNode = document.querySelector('#uploaded-img')
+    const newImagePreviewNode = document.createElement('img')
+
+    newImagePreviewNode.src = window.webkitURL.createObjectURL(this.files[0])
+    newImagePreviewNode.height = 200
+    newImagePreviewNode.id = "uploaded-img";
+    newImagePreviewNode.onload = function () {
         URL.revokeObjectURL(this.src)
     }
-    document.querySelector('#create-post').appendChild(img)
+
+    // Remove the old image preview
+    if(imagePreviewNode) {
+        imagePreviewNode.remove()
+    }
+
+    document.querySelector('#create-post').appendChild(newImagePreviewNode)
 }
