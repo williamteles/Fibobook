@@ -21,6 +21,13 @@ main {
 	align-items: center;
 }
 
+#feed {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
 .create-post {
 	background-color: white;
 	max-width: min-content;

@@ -8,7 +8,7 @@ function addPost() {
         let post_description = create_post_text.value;
         create_post_text.value = '';
 
-        let main = document.querySelector('main');
+        let feed = document.querySelector('#feed');
         let div_create_post = document.querySelector('.create-post');
 
         // div - post
@@ -135,7 +135,7 @@ function addPost() {
         botao_comment.appendChild(botao_comment_text);
         post.appendChild(botao_comment);
 
-        main.prepend(div_create_post, post);
+        feed.prepend(post);
 
         if (!(emoji == null)) {
             emoji.remove()
