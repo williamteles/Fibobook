@@ -2,6 +2,7 @@ function addPost() {
 
     let create_post_text = document.getElementById('create-text');
     let img = document.querySelector('.uploaded-img')
+    let emoji = document.querySelector('.area-emojis')
 
     if ((!(create_post_text.value == '')) || (!(img == null))) {
         let post_description = create_post_text.value;
@@ -135,7 +136,10 @@ function addPost() {
         post.appendChild(botao_comment);
 
         main.prepend(div_create_post, post);
-        document.querySelector('.area-emojis').remove()
+
+        if (!(emoji == null)) {
+            emoji.remove()
+        }
     } else {
         alert('Preencha o campo de texto para poder postar.')
     }
