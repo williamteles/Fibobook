@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/sidebar-menu-left.css" />
 	<link rel="stylesheet" href="css/sidebar-chat.css" />
 	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/chat.css"/>
 </head>
 
 <body>
@@ -72,7 +73,7 @@
 					<li>
 						<div class="sidebar-menu-item">
 							<svg xmlns="http://www.w3.org/2000/svg" class="left-sidebar-icons" viewBox="0 0 24 24">
-								<path d="M0 0h24v24H0V0z" fill="none" />
+								<path d="M1 0h24v24H0V0z" fill="none" />
 								<path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
 							</svg>
 							<a href="#">Itens Salvos</a>
@@ -82,43 +83,51 @@
 			</nav>
 		</aside>
 		<aside class="right">
-			<div id="chat">
-				<div class="friend">
-					<img src="image/profile-photos/pp-Alex.jpg" alt="perfil" class="chat-image">
-					<p>Alex Emanuel</p>
-					<svg class="status-circle">
-						<circle cx="10" cy="10" r="7" fill="#f04747" />
-					</svg>
-				</div>
-				<div class="friend">
-					<img src="image/profile-photos/pp-William.jpg" alt="perfil" class="chat-image">
-					<p>William Teles </p>
-					<svg class="status-circle">
-						<circle cx="10" cy="10" r="7" />
-					</svg>
-				</div>
-				<div class="friend">
-					<img src="image/profile-photos/pp-Gabriel.jpg" alt="perfil" class="chat-image">
-					<p>Gabriel Lima</p>
-					<svg class="status-circle">
-						<circle cx="10" cy="10" r="7" />
-					</svg>
-				</div>
-				<div class="friend">
-					<img src="image/profile-photos/pp-Italo.jpg" alt="perfil" class="chat-image">
-					<p>Ítalo Henrique</p>
-					<svg class="status-circle">
-						<circle cx="10" cy="10" r="7" fill="#747f8d" />
-					</svg>
-				</div>
-				<div class="friend">
-					<img src="image/profile-photos/pp-Keiza.jpg" alt="perfil" class="chat-image">
-					<p>Keiza Analizi</p>
-					<svg class="status-circle">
-						<circle cx="10" cy="10" r="7" />
-					</svg>
-				</div>
-			</div>
+			        <div id="chat-box">
+            <div id="chat-header">
+                <p>CHAT</p>
+                <svg id="user-chat-status">
+                   <circle cx="9" cy="10" r="7" fill="#f04747"/>
+                </svg>
+            </div>
+            <div id="friends-list">
+               <div class="friend">
+                   <img src="image/profile-photos/pp-Alex.jpg" alt="profile-image" class="friend-profile-image"/>
+                   <p class="friend-name">Alex Emanuel</p>
+                    <svg class="friend-chat-status">
+                        <circle cx="9" cy="10" r="7" fill="#f04747"/>
+                    </svg>
+                </div>
+                <div class="friend">
+                   <img src="image/profile-photos/pp-William.jpg" alt="profile-image" class="friend-profile-image"/>
+                   <p class="friend-name">William Teles</p>
+                    <svg class="friend-chat-status">
+                        <circle cx="9" cy="10" r="7" fill="#43b581"/>
+                    </svg>
+                </div>
+                <div class="friend">
+                   <img src="image/profile-photos/pp-Gabriel.jpg" alt="profile-image" class="friend-profile-image"/>
+                   <p class="friend-name">Gabriel Lima</p>
+                    <svg class="friend-chat-status">
+                        <circle cx="9" cy="10" r="7" fill="#43b581i"/>
+                    </svg>
+                </div>
+                <div class="friend">
+                   <img src="image/profile-photos/pp-Italo.jpg" alt="profile-image" class="friend-profile-image"/>
+                   <p class="friend-name">Italo Henrique</p>
+                    <svg class="friend-chat-status">
+                        <circle cx="9" cy="10" r="7" fill="#747f8d"/>
+                    </svg>
+                </div>
+                <div class="friend">
+                   <img src="image/profile-photos/pp-Keiza.jpg" alt="profile-image" class="friend-profile-image"/>
+                   <p class="friend-name">Keiza Analizi</p>
+                    <svg class="friend-chat-status">
+                        <circle cx="9" cy="10" r="7" fill="43b581"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
 		</aside>
 		<footer></footer>
 	</div>
