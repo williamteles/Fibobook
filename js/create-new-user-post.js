@@ -13,25 +13,26 @@ function createNewUserPost() {
 
     if(postDescription == "" && postImageSrc == null) {
         alert("Preencha o campo de texto para poder postar.");
-    }
-    
-    let likeNumber = 0;
 
-    let username = "Erick Jacquin";
-    let userProfileImageURL = "image/profile-photos/pp-Jacquin.jpg";
-    let user = new User(username, userProfileImageURL);
+    } else {
+        let likeNumber = 0;
 
-    const postNode = generatePostNode(user, postDescription, likeNumber, postImageSrc);
-    feedNode.prepend(postNode);
+        let username = "Erick Jacquin";
+        let userProfileImageURL = "image/profile-photos/pp-Jacquin.jpg";
+        let user = new User(username, userProfileImageURL);
 
-    // Reset the new posts creation section
-    postDescriptionNode.value = "";
+        const postNode = generatePostNode(user, postDescription, likeNumber, postImageSrc);
+        feedNode.prepend(postNode);
 
-    if(postImageNode) {
-        postImageNode.remove();
-    }
-    if(emojiAreaNode) {
-        emojiAreaNode.remove();
+        // Reset the new posts creation section
+        postDescriptionNode.value = "";
+
+        if(postImageNode) {
+            postImageNode.remove();
+        }
+        if(emojiAreaNode) {
+            emojiAreaNode.remove();
+        }
     }
 }
 
