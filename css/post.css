@@ -70,12 +70,6 @@
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-.comments {
-	height: 60px;
-	display: grid;
-	grid-template-rows: 30px auto;
-	grid-template-columns: 40px auto;
-}
 
 .butao {
 	grid-row: 6;
@@ -153,6 +147,13 @@
 	max-height: 180px;
 }
 
+.comments {
+	height: 60px;
+	display: grid;
+	grid-template-rows: 30px auto;
+	grid-template-columns: 40px auto 20px;
+}
+
 .perfil-image-comment {
 	grid-column: 1;
 	grid-row: 1;
@@ -170,6 +171,12 @@
 	font-weight: bolder;
 	margin-top: 7px;
 	font-family: "Segoe UI Historic","Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.delete-comment {
+	grid-column:3;
+	grid-row: 1;
+
 }
 
 .comment-post {
