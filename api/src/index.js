@@ -1,7 +1,9 @@
 const Hapi = require("@hapi/hapi");
-const posts = require("../data/posts");
 
-let cont = 0;
+const postsUpdateFeed = require("../data/posts_update_feed");
+const postsProfile = require("../data/posts_profile");
+const postsFeed = require("../data/posts_feed");
+
 
 const init = async () => {
 	const server = Hapi.server({
@@ -11,12 +13,34 @@ const init = async () => {
 	
 	server.route({
 		method: "GET",
-		path: "/api/posts",
+		path: "/api/posts_update_feed",
 		handler: function(req, res) {
-			return posts;
+			return postsUpdateFeed;
 		},
 		options: {
     		cors: true
+		}
+	});
+
+	server.route({
+		method: "GET",
+		path: "/api/posts_profile",
+		handler: function(req, res) {
+			return postsProfile;
+		},
+		options: {
+			cors: true
+		}
+	});
+
+	server.route({
+		method: "GET",
+		path: "/api/posts_feed",
+		handler: function(req, res) {
+			return postsFeed;
+		},
+		options: {
+			cors: true
 		}
 	});
 
