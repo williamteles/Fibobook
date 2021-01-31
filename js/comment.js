@@ -1,36 +1,44 @@
 
 function addComment(buttonComment) {
     
-    let post = buttonComment.parentNode;
-    let create_comment_text = post.querySelector('.comment');
+    const postNode = buttonComment.parentNode;
+    const commentInputNode = postNode.querySelector('.comment-input');
 
-    if (create_comment_text.value == '') {
+    if (commentInputNode.value == '') {
         alert('Preencha o campo de comentário para poder comentar.')
 
     } else {
-        let comment_area = post.querySelector('.comment-area');
+        const commentAreaNode = postNode.querySelector('.comment-area');
+        
+        // Comment input value
+        let commentText = commentInputNode.value;
 
-        let comment_text = create_comment_text.value;
-        create_comment_text.value = '';
+        const commentNode = document.createElement("div");
+        commentNode.classList.add("comments");
 
-        let perfil_image = document.createElement('img');
-        perfil_image.classList.add('perfil-image-comment');
-        perfil_image.src = 'image/profile-photos/pp-Jacquin.jpg';
-        comment_area.appendChild(perfil_image);
+        // Profile image
+        const profileImageNode = document.createElement('img');
+        profileImageNode.classList.add('perfil-image-comment');
+        profileImageNode.src = 'image/profile-photos/pp-Jacquin.jpg';
+        commentNode.appendChild(profileImageNode);
 
-        let username = document.createElement('p');
-        username.classList.add('username-comment');
-        let name = document.createTextNode('Erick Jacquin');
-        username.appendChild(name);
-        comment_area.appendChild(username);
+        // Username
+        const usernameNode = document.createElement('p');
+        usernameNode.classList.add('username-comment');
+        const nameTextNode = document.createTextNode('Erick Jacquin');
+        usernameNode.appendChild(nameTextNode);
+        commentNode.appendChild(usernameNode);
 
-        let comment_post = document.createElement('p');
-        comment_post.classList.add('comment-post');
-        let comment_post_text = document.createTextNode(comment_text);
+        // Comment
+        const commentPostNode = document.createElement('p');
+        commentPostNode.classList.add('comment-post');
+        const commentPostTextNode = document.createTextNode(commentText);
+        commentPostNode.appendChild(commentPostTextNode);
+        commentNode.appendChild(commentPostNode);
 
-        comment_post.appendChild(comment_post_text);
+        commentAreaNode.appendChild(commentNode);
 
-        comment_area.setAttribute('style', 'height: 60px');
-        comment_area.append(comment_post);
+        commentInputNode.value = '';
+
     }
 }

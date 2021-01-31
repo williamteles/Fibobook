@@ -84,8 +84,7 @@
 
     // Comment
     let commentNode = document.createElement("textarea");
-    commentNode.classList.add("comment");
-    commentNode.id = "comment";
+    commentNode.classList.add("comment-input");
     postNode.appendChild(commentNode);
 
     // Comments section
