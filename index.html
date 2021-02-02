@@ -85,55 +85,74 @@
 			</nav>
 		</aside>
 		<aside class="right">
-			        <div id="chat-box">
-            <div id="chat-header">
-                <p>CHAT</p>
-                <svg id="user-chat-status">
-                   <circle cx="9" cy="10" r="7" fill="#f04747"/>
-                </svg>
+			<div id="chat-box">
+				<div id="chat-header">
+					<p>CHAT</p>
+					<svg id="user-chat-status">
+						<circle cx="9" cy="10" r="7" fill="#f04747"/>
+					</svg>
+				</div>
+				<div id="friends-list">
+					<div class="friend">
+						<img src="image/profile-photos/pp-Alex.jpg" alt="profile-image" class="friend-profile-image"/>
+						<p class="friend-name">Alex Emanuel</p>
+						<svg class="friend-chat-status">
+							<circle cx="9" cy="10" r="7" fill="#f04747"/>
+						</svg>
+					</div>
+					<div class="friend">
+						<img src="image/profile-photos/pp-William.jpg" alt="profile-image" class="friend-profile-image"/>
+						<p class="friend-name">William Teles</p>
+						<svg class="friend-chat-status">
+							<circle cx="9" cy="10" r="7" fill="#43b581"/>
+						</svg>
+					</div>
+					<div class="friend">
+						<img src="image/profile-photos/pp-Gabriel.jpg" alt="profile-image" class="friend-profile-image"/>
+						<p class="friend-name">Gabriel Lima</p>
+						<svg class="friend-chat-status">
+							<circle cx="9" cy="10" r="7" fill="#43b581i"/>
+						</svg>
+					</div>
+					<div class="friend">
+						<img src="image/profile-photos/pp-Italo.jpg" alt="profile-image" class="friend-profile-image"/>
+						<p class="friend-name">Italo Henrique</p>
+						<svg class="friend-chat-status">
+							<circle cx="9" cy="10" r="7" fill="#747f8d"/>
+						</svg>
+					</div>
+					<div class="friend">
+						<img src="image/profile-photos/pp-Keiza.jpg" alt="profile-image" class="friend-profile-image"/>
+						<p class="friend-name">Keiza Analizi</p>
+						<svg class="friend-chat-status">
+							<circle cx="9" cy="10" r="7" fill="43b581"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div id ="chat-ind" style = "display:none">
+                <!--chatbot widget -->
+                <div class="widget">
+                    <div class="chat_header">
+						Chat
+                        <!--Add the name of the bot here -->
+                        <span class="chat_header_title"></span>
+                    </div>
+                    <!--Chatbot contents goes here -->
+                    <div class="chats" id="chats">
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <!--keypad for user to type the message -->
+                    <div class="keypad">
+                        <textarea id="userInput" placeholder="Digite uma mensagem ..." class="usrInput"></textarea>
+                        <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+					</div>
+				</div>
             </div>
-            <div id="friends-list">
-               <div class="friend">
-                   <img src="image/profile-photos/pp-Alex.jpg" alt="profile-image" class="friend-profile-image"/>
-                   <p class="friend-name">Alex Emanuel</p>
-                    <svg class="friend-chat-status">
-                        <circle cx="9" cy="10" r="7" fill="#f04747"/>
-                    </svg>
-                </div>
-                <div class="friend">
-                   <img src="image/profile-photos/pp-William.jpg" alt="profile-image" class="friend-profile-image"/>
-                   <p class="friend-name">William Teles</p>
-                    <svg class="friend-chat-status">
-                        <circle cx="9" cy="10" r="7" fill="#43b581"/>
-                    </svg>
-                </div>
-                <div class="friend">
-                   <img src="image/profile-photos/pp-Gabriel.jpg" alt="profile-image" class="friend-profile-image"/>
-                   <p class="friend-name">Gabriel Lima</p>
-                    <svg class="friend-chat-status">
-                        <circle cx="9" cy="10" r="7" fill="#43b581i"/>
-                    </svg>
-                </div>
-                <div class="friend">
-                   <img src="image/profile-photos/pp-Italo.jpg" alt="profile-image" class="friend-profile-image"/>
-                   <p class="friend-name">Italo Henrique</p>
-                    <svg class="friend-chat-status">
-                        <circle cx="9" cy="10" r="7" fill="#747f8d"/>
-                    </svg>
-                </div>
-                <div class="friend">
-                   <img src="image/profile-photos/pp-Keiza.jpg" alt="profile-image" class="friend-profile-image"/>
-                   <p class="friend-name">Keiza Analizi</p>
-                    <svg class="friend-chat-status">
-                        <circle cx="9" cy="10" r="7" fill="43b581"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
 		</aside>
 		<footer></footer>
 	</div>
-
 	<script type = "module" src = "js/create-new-user-post.js"></script>
 	<script type = "module" src = "js/update-feed-posts.js"></script>
 	<script type = "module" src = "js/load-feed-posts.js"></script>
@@ -142,6 +161,7 @@
 	<script src="js/like.js"></script>
 	<script src="js/comment.js"></script>
 	<script src="js/options.js"></script>
+	<script src="js/chat.js"></script>
 </body>
 
 </html>

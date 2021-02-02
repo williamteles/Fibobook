@@ -4,20 +4,19 @@
 #chat-header {
     background-color: #424242;
     color: white;
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 #chat-box {
+    width: 80%;
+    min-width: 197px;
+    position: sticky;
     bottom: 0px;
-    right: 0px;
-    width: 260px;
-    position: fixed;
-    margin-right: 10px;
-    
+    align-self: end;
 }
 
 #user-chat-status, .friend-chat-status {
@@ -46,6 +45,4 @@
 #friends-list {
     background-color: white;
     padding: 10px;
-    position: relative;
-    top: -5px;
 }
