@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="css/sidebar-chat.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/chat.css"/>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -85,71 +88,51 @@
 			</nav>
 		</aside>
 		<aside class="right">
-			<div id="chat-box">
-				<div id="chat-header">
+			<div id="chatbox">
+				<div id="chatbox-header" onclick="hideChat();">
 					<p>CHAT</p>
 					<svg id="user-chat-status">
-						<circle cx="9" cy="10" r="7" fill="#f04747"/>
+						 <circle cx="9" cy="10" r="7" fill="#f04747"/>
 					</svg>
 				</div>
 				<div id="friends-list">
 					<div class="friend">
 						<img src="image/profile-photos/pp-Alex.jpg" alt="profile-image" class="friend-profile-image"/>
-						<p class="friend-name">Alex Emanuel</p>
+						<p class="friend-name" onclick="openChat(this);">Alex Emanuel</p>
 						<svg class="friend-chat-status">
 							<circle cx="9" cy="10" r="7" fill="#f04747"/>
 						</svg>
 					</div>
 					<div class="friend">
 						<img src="image/profile-photos/pp-William.jpg" alt="profile-image" class="friend-profile-image"/>
-						<p class="friend-name">William Teles</p>
+						<p class="friend-name" onclick="openChat(this);">William Teles</p>
 						<svg class="friend-chat-status">
 							<circle cx="9" cy="10" r="7" fill="#43b581"/>
 						</svg>
 					</div>
 					<div class="friend">
 						<img src="image/profile-photos/pp-Gabriel.jpg" alt="profile-image" class="friend-profile-image"/>
-						<p class="friend-name">Gabriel Lima</p>
+						<p class="friend-name" onclick="openChat(this);">Gabriel Lima</p>
 						<svg class="friend-chat-status">
 							<circle cx="9" cy="10" r="7" fill="#43b581i"/>
 						</svg>
 					</div>
 					<div class="friend">
 						<img src="image/profile-photos/pp-Italo.jpg" alt="profile-image" class="friend-profile-image"/>
-						<p class="friend-name">Italo Henrique</p>
+						<p class="friend-name" onclick="openChat(this);">Italo Henrique</p>
 						<svg class="friend-chat-status">
 							<circle cx="9" cy="10" r="7" fill="#747f8d"/>
 						</svg>
 					</div>
 					<div class="friend">
 						<img src="image/profile-photos/pp-Keiza.jpg" alt="profile-image" class="friend-profile-image"/>
-						<p class="friend-name">Keiza Analizi</p>
+						<p class="friend-name" onclick="openChat(this);">Keiza Analizi</p>
 						<svg class="friend-chat-status">
 							<circle cx="9" cy="10" r="7" fill="43b581"/>
 						</svg>
 					</div>
 				</div>
 			</div>
-			<div id ="chat-ind" style = "display:none">
-                <!--chatbot widget -->
-                <div class="widget">
-                    <div class="chat_header">
-						Chat
-                        <!--Add the name of the bot here -->
-                        <span class="chat_header_title"></span>
-                    </div>
-                    <!--Chatbot contents goes here -->
-                    <div class="chats" id="chats">
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <!--keypad for user to type the message -->
-                    <div class="keypad">
-                        <textarea id="userInput" placeholder="Digite uma mensagem ..." class="usrInput"></textarea>
-                        <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
-					</div>
-				</div>
-            </div>
 		</aside>
 		<footer></footer>
 	</div>
