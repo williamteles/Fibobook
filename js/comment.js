@@ -29,6 +29,12 @@ function addComment(buttonComment) {
         usernameNode.appendChild(nameTextNode);
         commentNode.appendChild(usernameNode);
 
+        // Delete
+        const deleteCommentNode = document.createElement('button');
+        deleteCommentNode.classList.add('delete-comment');
+        deleteCommentNode.setAttribute('onclick', 'deleteComment(this)')
+        commentNode.appendChild(deleteCommentNode)
+
         // Comment
         const commentPostNode = document.createElement('p');
         commentPostNode.classList.add('comment-post');
@@ -42,3 +48,7 @@ function addComment(buttonComment) {
 
     }
 }
+
+function deleteComment(comment){
+    comment.parentNode.remove()
+}   
