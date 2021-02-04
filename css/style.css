@@ -8,7 +8,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) minmax(350px, 2fr) minmax(200px, 1fr);
-    grid-template-rows: 10vh minmax(calc(100vh - 69px), auto);
+    grid-template-rows: 10vh minmax(90vh, auto);
 }
 
 #uploaded-img {
