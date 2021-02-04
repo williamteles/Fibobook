@@ -177,7 +177,12 @@
 	grid-column:3;
 	grid-row: 1;
 	margin-top: 6px;
+	cursor: pointer;
 
+}
+
+.delete-comment:hover {
+	fill: rgb(236, 52, 52);
 }
 
 .comment-post {
