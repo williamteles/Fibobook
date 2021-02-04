@@ -176,6 +176,7 @@
 .delete-comment {
 	grid-column:3;
 	grid-row: 1;
+	margin-top: 6px;
 
 }
 
