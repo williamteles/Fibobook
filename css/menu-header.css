@@ -19,9 +19,12 @@ header {
 
 #logo {
     padding-top: 5px;
-    width: 170px;
     height: 60px;
     margin-left:5px;
+}
+
+#logo-div {
+    width: 170px;
 }
 
 input{
