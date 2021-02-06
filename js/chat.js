@@ -1,6 +1,6 @@
 function hideChat() {
     const friendsList = document.querySelector("#friends-list");
-    friendsList.style.display = friendsList.style.display != "none" ? "none" : "block";
+    friendsList.style.display = friendsList.style.display != "block" ? "block" : "none";
 }
 
 function generateChat(friendName) {
@@ -31,9 +31,7 @@ function openChat(e) {
     const container = document.querySelector(".right");
     const newChat = generateChat(friendName);
 
-    container.innerHTML = newChat + container.innerHTML;
-} 
-
+    container.innerHTML = newChat + container.innerHTML; } 
 function sendMessage(e) {
     var keyCode = e.keyCode || e.which;
 
