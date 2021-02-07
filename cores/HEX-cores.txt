@@ -1,5 +1,0 @@
-Roxo		#794bc4
-Verde		#17bf63
-Laranja		#f45e22
-Background	#18191a
-Background-Post	#242526

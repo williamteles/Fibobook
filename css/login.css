@@ -2,14 +2,14 @@
   --title-color:#466175;
   --primary-color: #1CDF74;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html,
-body {
+html, body {
   height: 100vh;
 }
 
@@ -81,7 +81,6 @@ form .footer .btn-login {
 }
 
 form .footer a {
-  /* text-decoration: none; */
   color: #1CDF74;
   font-style: italic;
 
@@ -176,7 +175,6 @@ form.validate-error {
 #logo {
   margin-right: 10px;
 }
-
 
 /* squares */
 body {

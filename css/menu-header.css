@@ -5,7 +5,6 @@ header {
     position: relative;
 }
 
-
 .menu {
     display: flex;
     justify-content: space-between;
@@ -45,7 +44,6 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .perfil-image {

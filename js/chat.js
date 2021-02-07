@@ -1,4 +1,4 @@
-function hideChat() {
+function toggleChat() {
     const friendsList = document.querySelector("#friends-list");
     friendsList.style.display = friendsList.style.display != "block" ? "block" : "none";
 }
@@ -47,11 +47,10 @@ function sendMessage(e) {
     }
 }
 
-
 function closeChat(e){
     e.parentNode.parentNode.parentNode.remove()
 }
-//==================================== Set user response =====================================
+
 function setUserResponse(message) {
     const messagesSection = document.querySelector("#messages-section");
 
@@ -67,7 +66,6 @@ function setUserResponse(message) {
     scrollToBottomOfResults();
 }
 
-//=========== Scroll to the bottom of the chats after new message has been added to chat ======
 function scrollToBottomOfResults() {
     var terminalResultsDiv = document.getElementById("messages-section");
     terminalResultsDiv.scrollTop = terminalResultsDiv.scrollHeight;

@@ -1,13 +1,11 @@
 // Cadastro 
-
 var menssagemCadastro = document.getElementById('cadastro');
 menssagemCadastro.style.display = 'none';
 
 var getForm = document.getElementById('modal-form');
   getForm.addEventListener('submit', () => {
-  menssagemCadastro.style.display = 'block'
+  menssagemCadastro.style.display = 'block';
 });  
-
 
 // Login
 var emailJacquin = "erickjacquin_tompero@gmail.com";
@@ -20,10 +18,13 @@ var messageError = document.getElementById("error");
 messageError.style.display = "none";
 
 btnLogin.addEventListener("click", event => {
-
   const fields = [...document.querySelectorAll(".input-block input")];
+
   fields.forEach(field => {
-    if (field.value === "") form.classList.add("validate-error");
+    if (field.value === "") {
+      form.classList.add("validate-error");
+    } 
+
     const userEmail = document.getElementById("email");
     const userPassword = document.getElementById("login-password");
     
@@ -31,12 +32,14 @@ btnLogin.addEventListener("click", event => {
       form.classList.add("validate-error");
       event.preventDefault();
       messageError.style.display = 'block';
+
     }else{
       form.action = "index.html";
     }
   });
 
   const formError = document.querySelector(".validate-error");
+
   if (formError) {
     formError.addEventListener("animationend", event => {
       if (event.animationName === "nono") {
@@ -47,7 +50,6 @@ btnLogin.addEventListener("click", event => {
     form.classList.add("form-hide");
   }
 });
-
 
 form.addEventListener("animationstart", event => {
   if (event.animationName === "down") {
@@ -61,4 +63,3 @@ form.addEventListener("animationend", event => {
     document.querySelector("body").style.overflow = "none";
   }
 });
-

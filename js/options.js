@@ -1,5 +1,4 @@
 function optionsChoice(optionElement) {
-
     let post = optionElement.parentNode.parentNode.parentNode;
 
     switch (optionElement.innerText) {

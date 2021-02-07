@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Segoe UI Historic|Segoe UI");
 
-
 header {
     grid-column: 1/-1;
     position: relative;
 	z-index: 1;
 }
-
 
 body {
     height: 100vh;
@@ -18,7 +16,6 @@ body {
     grid-template-columns: minmax(200px, 0.5fr) minmax(350px, 2fr);
     grid-template-rows: 10vh 90vh ;
 }
-
 
 main {
     background:#242526;
@@ -95,7 +92,6 @@ main {
     border-bottom: 2px groove #18191a;
 }
 
-
 footer {
     background:hsl(200, 6%, 10%);
     grid-column: 1/-1;
@@ -117,11 +113,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-	/* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    column-gap: 20px;
-    padding: 2px 10px 0px 10px; */
-    
 }
 
 .post-perfil {

@@ -1,5 +1,5 @@
 // squares
-const ulSquares = document.querySelector("ul.squares")
+const ulSquares = document.querySelector("ul.squares");
 
 for (let i = 0; i < 50; i++) {
     const li = document.createElement("li");
@@ -18,8 +18,8 @@ for (let i = 0; i < 50; i++) {
 
     li.style.left = `${position}%`;
 
-    li.style.animationDelay = `${delay}s`
-    li.style.animationDuration = `${duration}s`
+    li.style.animationDelay = `${delay}s`;
+    li.style.animationDuration = `${duration}s`;
     li.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`;
 
     ulSquares.appendChild(li);

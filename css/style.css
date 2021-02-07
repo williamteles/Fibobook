@@ -67,7 +67,6 @@ main {
 	grid-template-columns: 30px 30px 30px 30px auto 50px;
 	row-gap: 10px;
 	column-gap: 10px;
-
 }
 
 #create-description {

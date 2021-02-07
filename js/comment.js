@@ -5,7 +5,7 @@ function addComment(buttonComment) {
     const commentInputNode = postNode.querySelector('.comment-input');
 
     if (commentInputNode.value == '') {
-        alert('Preencha o campo de comentário para poder comentar.')
+        alert('Preencha o campo de comentário para poder comentar.');
 
     } else {
         const commentAreaNode = postNode.querySelector('.comment-area');
@@ -59,13 +59,12 @@ function addComment(buttonComment) {
         commentAreaNode.appendChild(commentNode);
 
         commentInputNode.value = '';
-
     }
 }
 
 function deleteComment(comment) {
     let deleteCommentText = confirm('Tem certeza?');
     if (deleteCommentText){
-        comment.parentNode.remove()
+        comment.parentNode.remove();
     }
 }   

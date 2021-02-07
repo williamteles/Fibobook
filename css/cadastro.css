@@ -1,42 +1,29 @@
 body {
     height: 100vh;
     background-color: var(--background);
-
-    /* margin-left: 35px; */
-
     font-family: Roboto;
     color: var(--title-color);
-    /* margin: 0 auto; */
-
 }
-.container {
 
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 90%;
     max-width: 1200px;
     height: 820px;
-
     margin: 0 auto;
 }
 
 .container .left-wrapper {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
     flex-direction: column;
     width: 350px;
     height: 550px;
     padding: 24px;
-
     background-color: #17bf63;
-
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-
-    /* box-shadow: 0 0 35px rgba(0, 0,0, 0.35); */
 }
 
 .left-wrapper .headers {
@@ -48,7 +35,6 @@ body {
 .left-wrapper .content {
     margin: 0 auto;
     line-height: 2.5rem;
-    
 }
 
 .left-wrapper .content h3 {
@@ -60,14 +46,9 @@ body {
     width: 400px;
     height: 550px;
     padding: 24px;
-
     background-color: #1f444f;
-
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-
-    /* box-shadow: 0 0 15px rgba(0, 0,0, 0.45); */
-
 }
 
 .right-wrapper form {
@@ -75,13 +56,11 @@ body {
     max-width: 350px;
     height: 450px;
     box-sizing: border-box;
-
 }
 
 form .image {
     display: flex;
     align-items: center;
-    
 }
 
 form legend {
@@ -96,24 +75,25 @@ form legend h4 {
     width: 65px;
     height: 60px;
 }
+
 .field {
     position: relative;
 
 }
+
 form .field {
     display: flex;
     flex-direction: column;
 }
+
 form fieldset {
     margin-top: 26px;
-
     border: 0;
 }
 
 form .field-group {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 
@@ -122,9 +102,7 @@ form input {
     margin-bottom: 25px;
     border: none;
     border-bottom: 1px solid #365760;
-
     color: white;
-    
     background-color: transparent;
     outline: none;
 }
@@ -133,7 +111,6 @@ input ~ label {
     position: absolute;
     top: 16px;
     left: 0;
-
     transition: 0.4s;
 }
 
@@ -143,7 +120,6 @@ input:valid ~ label {
     font-size: 1.3rem;
 }
 
-
 form button {
     width: 85px;
     padding: 5px;
@@ -151,6 +127,5 @@ form button {
     border: none;
     background-color: var(--title-color);
     color: var(--primary-color);
-
     margin: 0 auto;
 }

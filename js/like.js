@@ -1,8 +1,7 @@
 function iLike(buttonLike) {
 
-	let post = buttonLike.parentNode
-	let like = post.querySelector('.likes')
-	 
+	let post = buttonLike.parentNode;
+	let like = post.querySelector('.likes'); 
 	let qutLikes = parseInt(like.innerText);
 
 	if (buttonLike.style.fill == "rgb(24, 25, 26)") {
