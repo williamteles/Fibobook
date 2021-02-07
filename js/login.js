@@ -56,3 +56,15 @@ form.addEventListener("animationend", event => {
     document.querySelector("body").style.overflow = "none";
   }
 });
+
+
+var menssagemCadastro = document.getElementById('cadastro');
+menssagemCadastro.style.display = 'none';
+
+var getForm = document.getElementById('modal-form');
+console.log(getForm);
+getForm.addEventListener('submit', () => {
+  menssagemCadastro.style.display = 'block'
+});  
+
+
