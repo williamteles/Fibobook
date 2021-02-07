@@ -4,19 +4,11 @@ const form = document.querySelector("form");
 var emailJacquin = "erickjacquin_tompero@gmail.com";
 var passwordJacquin = "vergonhadaproficion";
 
-// function validateLogin() {
-//   const userEmail = document.getElementById("email");
-//   const userPassword = document.getElementById("login-password");
+var messageError = document.getElementById("error").style.display = 'none';
 
-//   if (userEmail.value != emailJacquin || userPassword.value != passwordJacquin ) {
-//     alert("Ta errado isso aí boy");
-//   }else{
-//     form.action = "index.html";
-//   }
-// }
+
 
 btnLogin.addEventListener("click", event => {
-  // event.preventDefault();
 
 
   const fields = [...document.querySelectorAll(".input-block input")];
@@ -24,17 +16,16 @@ btnLogin.addEventListener("click", event => {
     if (field.value === "") form.classList.add("validate-error");
     const userEmail = document.getElementById("email");
     const userPassword = document.getElementById("login-password");
-  
+    
+
     if (userEmail.value != emailJacquin || userPassword.value != passwordJacquin ) {
       form.classList.add("validate-error");
       event.preventDefault();
+      messageError.style.display = 'block';
     }else{
       form.action = "index.html";
     }
-    // if (field[0].value == jacquinEmail && field[1].value == jacquinPassword) {
-    //   document.getElementById("form").action = "/index.html"
-    // } 
-      
+    
   });
 
   const formError = document.querySelector(".validate-error");

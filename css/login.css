@@ -87,6 +87,14 @@ form .footer a {
 
 }
 
+form .message-error {
+  margin: 15px 0 0 130px ;
+}
+
+form #message {
+  color: red;
+}
+
 /* APARIÇÃO DO FORM */
 form {
   overflow: hidden;
