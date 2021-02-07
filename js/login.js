@@ -1,15 +1,25 @@
-const btnLogin = document.querySelector(".btn-login");
-const form = document.querySelector("form");
+// Cadastro 
 
+var menssagemCadastro = document.getElementById('cadastro');
+menssagemCadastro.style.display = 'none';
+
+var getForm = document.getElementById('modal-form');
+  getForm.addEventListener('submit', () => {
+  menssagemCadastro.style.display = 'block'
+});  
+
+
+// Login
 var emailJacquin = "erickjacquin_tompero@gmail.com";
 var passwordJacquin = "vergonhadaproficion";
+
+const btnLogin = document.querySelector(".btn-login");
+const form = document.querySelector("form");
 
 var messageError = document.getElementById("error");
 messageError.style.display = "none";
 
-
 btnLogin.addEventListener("click", event => {
-
 
   const fields = [...document.querySelectorAll(".input-block input")];
   fields.forEach(field => {
@@ -17,7 +27,6 @@ btnLogin.addEventListener("click", event => {
     const userEmail = document.getElementById("email");
     const userPassword = document.getElementById("login-password");
     
-
     if (userEmail.value != emailJacquin || userPassword.value != passwordJacquin ) {
       form.classList.add("validate-error");
       event.preventDefault();
@@ -25,7 +34,6 @@ btnLogin.addEventListener("click", event => {
     }else{
       form.action = "index.html";
     }
-    
   });
 
   const formError = document.querySelector(".validate-error");
@@ -38,9 +46,6 @@ btnLogin.addEventListener("click", event => {
   } else {
     form.classList.add("form-hide");
   }
-
-
-  
 });
 
 
@@ -56,15 +61,4 @@ form.addEventListener("animationend", event => {
     document.querySelector("body").style.overflow = "none";
   }
 });
-
-
-var menssagemCadastro = document.getElementById('cadastro');
-menssagemCadastro.style.display = 'none';
-
-var getForm = document.getElementById('modal-form');
-console.log(getForm);
-getForm.addEventListener('submit', () => {
-  menssagemCadastro.style.display = 'block'
-});  
-
 
