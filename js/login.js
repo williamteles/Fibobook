@@ -4,8 +4,8 @@ const form = document.querySelector("form");
 var emailJacquin = "erickjacquin_tompero@gmail.com";
 var passwordJacquin = "vergonhadaproficion";
 
-var messageError = document.getElementById("error").style.display = 'none';
-
+var messageError = document.getElementById("error");
+messageError.style.display = "none";
 
 
 btnLogin.addEventListener("click", event => {
