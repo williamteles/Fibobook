@@ -6,7 +6,7 @@ async function updateFeedPosts() {
     const feedNode = document.querySelector("#feed");
 
     if ((window.innerHeight + window.scrollY) >= feedNode.offsetHeight) {
-        let posts = await loadPosts("http://localhost:8000/api/posts_update_feed");
+        let posts = await loadPosts("https://fibobook-posts-api.herokuapp.com/api/posts_update_feed");
 
         for(let post of posts) {
             let user = post.user;

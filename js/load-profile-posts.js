@@ -4,7 +4,7 @@ import loadPosts from "./load-posts.js"
 
 async function loadProfilePosts() {
     const postersNode = document.querySelector("#posters");
-    let posts = await loadPosts("http://localhost:8000/api/posts_profile");
+    let posts = await loadPosts("https://fibobook-posts-api.herokuapp.com/api/posts_profile");
 
     for(let post of posts) {
         let user = post.user;
